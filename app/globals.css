@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
+/*
+  Hydro Mech Engineers — brand design tokens (Tailwind v4 CSS-first config).
+  Declaring colors here makes utilities like `bg-navy-950`, `text-primary`,
+  `border-silver`, `font-display` available throughout the app.
+*/
+@theme {
+  /* Dark / industrial — graphite, not navy (navy read as "AI-generated") */
+  --color-ink: #14171c; /* primary dark surface: utility bar, footer, dark sections */
+  --color-ink-soft: #20242b; /* softer dark            */
+  --color-graphite: #1d2128; /* dark cards / raised     */
+  --color-graphite-700: #2a2f37; /* hairlines on dark   */
+
+  /* Signature accent — orange, pulled from the foot-pedals on the real machines */
+  --color-accent: #f97316; /* bright orange — small accents (underline, dots, eyebrows) */
+  --color-accent-600: #ea580c; /* burnt orange — primary buttons   */
+  --color-accent-700: #c2410c; /* deeper — button hover            */
+
+  /* Neutrals */
+  --color-steel: #5a6270; /* muted body text on light  */
+  --color-line: #e2e5ea; /* light borders             */
+  --color-silver: #cbd5e1; /* metallic text on dark    */
+  --color-mist: #f5f6f8; /* light section bg           */
+
+  /* Legacy navy tokens (kept defined; no longer used for new work) */
+  --color-navy-950: #070c1c;
+  --color-navy-900: #0b1430;
+
+  /* Typography */
+  --font-display: var(--font-space-grotesk), system-ui, sans-serif;
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0b1430;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem; /* offset for the sticky header on anchor jumps */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
