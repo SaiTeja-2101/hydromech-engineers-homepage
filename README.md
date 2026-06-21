@@ -4,7 +4,7 @@ A fast, responsive marketing website for Hydro Mech Engineers, a sheet metal mac
 
 This project was built as an internship screening task. The goal was a premium, responsive website that uses the company's real brochure content and does not look AI generated.
 
-**Live demo:** <add your Vercel URL here>
+**Live demo:** <https://hydromech-engineers-homepage.vercel.app>
 
 ## About the project
 
