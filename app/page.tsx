@@ -5,8 +5,8 @@ import About from "@/components/About";
 import Products from "@/components/Products";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Process from "@/components/Process";
+import Contact from "@/components/Contact";
 
-// Sections are filled in one phase at a time; remaining ones are placeholders.
 export default function Home() {
   return (
     <>
@@ -18,22 +18,7 @@ export default function Home() {
         <Products />
         <WhyChooseUs />
         <Process />
-
-        {[
-          ["contact", "Contact"],
-        ].map(([id, label], i) => (
-          <section
-            key={id}
-            id={id}
-            className={`flex min-h-[60vh] items-center justify-center ${
-              i % 2 === 0 ? "bg-white" : "bg-mist"
-            }`}
-          >
-            <p className="font-display text-2xl font-bold text-navy-900/40">
-              {label} section — placeholder
-            </p>
-          </section>
-        ))}
+        <Contact />
       </main>
     </>
   );
