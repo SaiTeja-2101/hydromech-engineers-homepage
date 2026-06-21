@@ -1,14 +1,13 @@
 import Image from "next/image";
-import { Check, ArrowRight } from "lucide-react";
 import { about } from "@/lib/content";
 import Container from "./ui/Container";
 import Reveal from "./ui/Reveal";
 import Button from "./ui/Button";
 
 /**
- * About Us — light section that floats the REAL flagship machine photo, with a
- * real workshop close-up inset and a "15+ Years" chip. Uses the company's own
- * provided images for credibility (the hero carousel uses stock atmosphere).
+ * About Us — editorial split, icon-free. Left = headline + story + numbered
+ * values (01/02/03) + vision quote + button. Right = real flagship machine on a
+ * clean light stage with a "15+ Years" chip. No lucide icons anywhere here.
  */
 export default function About() {
   return (
@@ -20,8 +19,8 @@ export default function About() {
             <span className="text-[0.8rem] font-semibold uppercase tracking-[0.22em] text-accent">
               About Us
             </span>
-            <h2 className="mt-4 font-display text-3xl font-bold leading-[1.1] tracking-tight text-ink sm:text-4xl lg:text-[2.75rem]">
-              Built on Reliable, Economical Engineering
+            <h2 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl">
+              {about.headline}
             </h2>
 
             <div className="mt-6 space-y-4 text-base leading-relaxed text-steel">
@@ -30,15 +29,24 @@ export default function About() {
               ))}
             </div>
 
-            <ul className="mt-8 space-y-3">
-              {about.values.map((value) => (
-                <li key={value} className="flex items-center gap-3">
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded bg-accent-600 text-white">
-                    <Check className="h-4 w-4" strokeWidth={3} />
+            {/* Numbered values — no icons */}
+            <ul className="mt-8 border-t border-line">
+              {about.values.map((v, i) => (
+                <li
+                  key={v.title}
+                  className="flex gap-5 border-b border-line py-4"
+                >
+                  <span className="font-mono text-lg font-semibold tabular-nums text-accent">
+                    {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="text-[0.95rem] font-medium text-ink">
-                    {value}
-                  </span>
+                  <div>
+                    <h3 className="text-base font-semibold text-ink">
+                      {v.title}
+                    </h3>
+                    <p className="mt-0.5 text-sm leading-relaxed text-steel">
+                      {v.desc}
+                    </p>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -48,25 +56,24 @@ export default function About() {
             </blockquote>
 
             <Button href="#products" className="mt-9">
-              Discover Our Machines
-              <ArrowRight className="h-4 w-4" />
+              Discover Our Machines →
             </Button>
           </Reveal>
 
-          {/* Visual composition */}
+          {/* Visual */}
           <Reveal index={1} className="relative mx-auto w-full max-w-[520px] lg:mr-0">
-            {/* subtle offset frame behind the card for depth */}
+            {/* subtle offset frame for depth */}
             <div
               aria-hidden
               className="absolute inset-0 -z-10 translate-x-3 translate-y-3 rounded-2xl border border-accent/30"
             />
 
-            {/* Main flagship product card */}
             <div className="relative rounded-2xl border border-line bg-mist p-6 shadow-xl shadow-ink/5">
-              {/* model tag — top-left, no longer collides with anything */}
-              <span className="absolute left-4 top-4 z-10 rounded-md bg-ink px-2.5 py-1 font-mono text-[0.65rem] font-semibold uppercase tracking-wider text-silver">
-                HMB-303 · Bus Bar
-              </span>
+              {/* soft floor shadow */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute bottom-8 left-1/2 h-10 w-3/5 -translate-x-1/2 rounded-[50%] bg-ink/10 blur-2xl"
+              />
               <div className="relative aspect-[4/3] w-full">
                 <Image
                   src="/products/busbar-processing.jpg"
@@ -78,23 +85,10 @@ export default function About() {
               </div>
             </div>
 
-            {/* Real workshop inset — bottom-right */}
-            <div className="absolute -bottom-6 right-5 w-32 overflow-hidden rounded-xl shadow-lg ring-1 ring-line sm:w-40">
-              <div className="relative aspect-[4/3]">
-                <Image
-                  src="/products/detail-bending.jpg"
-                  alt="Bending station on the Hydro Mech workshop floor"
-                  fill
-                  sizes="160px"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-
-            {/* 15+ Years chip — top-right */}
-            <div className="absolute -top-4 right-4 flex items-center gap-2.5 rounded-lg border-l-2 border-accent bg-ink px-3.5 py-2 shadow-lg">
-              <span className="font-display text-xl font-bold text-white">15+</span>
-              <span className="text-[0.6rem] font-semibold uppercase leading-tight tracking-wider text-silver/80">
+            {/* 15+ Years chip */}
+            <div className="absolute -right-3 -top-3 flex items-center gap-2.5 rounded-lg border-l-2 border-accent bg-ink px-4 py-2.5 shadow-lg">
+              <span className="font-display text-2xl font-bold text-white">15+</span>
+              <span className="text-[0.62rem] font-semibold uppercase leading-tight tracking-wider text-silver/80">
                 Years of
                 <br />
                 Experience

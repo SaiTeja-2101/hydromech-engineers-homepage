@@ -89,14 +89,24 @@ export const stats = [
 
 /** About section — paraphrased from the brochure, in plain language. */
 export const about = {
+  headline: "Built on Reliable, Economical Engineering",
   paragraphs: [
     "Hydro Mech Engineers is a sheet metal company with one clear goal: to deliver reliable and economical machines that meet real industrial demands.",
     "We use high-quality materials and tested components, so every machine is dependable and built to last. We keep improving our products, and we stand behind them long after delivery.",
   ],
   values: [
-    "High-quality materials and components",
-    "Custom-built for your needs",
-    "Strong after-sales support",
+    {
+      title: "Quality Materials",
+      desc: "High-grade materials and tested components in every build.",
+    },
+    {
+      title: "Custom-Built",
+      desc: "Machines shaped around your material and output.",
+    },
+    {
+      title: "After-Sales Support",
+      desc: "Fast service and spare parts that keep you running.",
+    },
   ],
   vision:
     "To deliver innovative products with superior quality and unmatched customer support.",
@@ -163,59 +173,55 @@ export const products = [
   },
 ] as const;
 
-/** Why Choose Us — feature cards. `icon` maps to a lucide icon in the component. */
+/** Why Choose Us — reasons (icon-free; each carries a real photo). */
 export const features = [
   {
-    icon: "ShieldCheck",
     title: "High-Quality Engineering",
     desc: "Machines built with superior-grade materials and components.",
+    image: "/why/1.jpg",
   },
   {
-    icon: "Lightbulb",
     title: "Innovative Designs",
     desc: "Constant improvement in technology and specifications.",
+    image: "/why/2.jpg",
   },
   {
-    icon: "Settings",
     title: "Custom Solutions",
     desc: "Machines tailored to meet unique client requirements.",
+    image: "/why/3.jpg",
   },
   {
-    icon: "Gauge",
     title: "Reliable Performance",
     desc: "Machines tested for durability and accuracy.",
+    image: "/why/4.jpg",
   },
   {
-    icon: "Headset",
     title: "After-Sales Service",
     desc: "Continuous support and quick problem-solving.",
+    image: "/why/5.jpg",
   },
   {
-    icon: "BadgeIndianRupee",
     title: "Affordable Solutions",
     desc: "Cost-effective machinery without compromising on quality.",
+    image: "/why/6.jpg",
   },
 ] as const;
 
 /** Process — the end-to-end journey. */
 export const processSteps = [
   {
-    icon: "MessagesSquare",
     title: "Consultation",
     desc: "Understanding your industrial needs and challenges.",
   },
   {
-    icon: "PencilRuler",
     title: "Design & Customization",
     desc: "Developing machines tailored to your specifications.",
   },
   {
-    icon: "Factory",
     title: "Manufacturing",
     desc: "Precision engineering with high-quality materials.",
   },
   {
-    icon: "Truck",
     title: "Delivery & Support",
     desc: "On-time delivery with reliable after-sales service.",
   },

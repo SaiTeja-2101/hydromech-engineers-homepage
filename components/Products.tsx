@@ -55,7 +55,7 @@ export default function Products() {
             <span className="text-[0.8rem] font-semibold uppercase tracking-[0.22em] text-accent">
               Products &amp; Services
             </span>
-            <h2 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl">
+            <h2 className="mt-4 font-display text-4xl font-bold leading-[1.02] tracking-tight text-white sm:text-5xl lg:text-6xl">
               Our Machines
             </h2>
             <p className="mt-4 max-w-sm text-base leading-relaxed text-silver/80">

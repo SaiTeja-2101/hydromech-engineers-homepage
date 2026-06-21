@@ -3,6 +3,8 @@ import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import About from "@/components/About";
 import Products from "@/components/Products";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import Process from "@/components/Process";
 
 // Sections are filled in one phase at a time; remaining ones are placeholders.
 export default function Home() {
@@ -14,10 +16,10 @@ export default function Home() {
         <TrustBar />
         <About />
         <Products />
+        <WhyChooseUs />
+        <Process />
 
         {[
-          ["why-us", "Why Us"],
-          ["process", "Process"],
           ["contact", "Contact"],
         ].map(([id, label], i) => (
           <section

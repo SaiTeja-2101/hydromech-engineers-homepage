@@ -34,7 +34,7 @@ export default function SectionHeading({
       </span>
       <h2
         className={cn(
-          "font-display text-3xl font-bold leading-[1.1] tracking-tight sm:text-4xl md:text-[2.75rem]",
+          "font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl",
           isDark ? "text-white" : "text-ink",
         )}
       >
