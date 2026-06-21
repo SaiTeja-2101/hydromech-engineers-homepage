@@ -17,7 +17,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Hydro Mech Engineers — Reliable Sheet Metal Machines",
+  title: "Hydro Mech Engineers | Reliable Sheet Metal Machines",
   description:
     "Hydro Mech Engineers designs and manufactures durable, efficient sheet metal machinery — bus bar processing, clinching, section bending, sheet rolling and CNC press brake tools.",
   keywords: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title:
-      "Hydro Mech Engineers — Reliable Machines, Built for Industrial Demands",
+      "Hydro Mech Engineers | Reliable Machines, Built for Industrial Demands",
     description:
       "Durable and efficient sheet metal solutions, customised for industrial demands.",
     type: "website",
