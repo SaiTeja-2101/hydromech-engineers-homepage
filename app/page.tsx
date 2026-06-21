@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
+import About from "@/components/About";
+import Products from "@/components/Products";
 
 // Sections are filled in one phase at a time; remaining ones are placeholders.
 export default function Home() {
@@ -10,10 +12,10 @@ export default function Home() {
       <main>
         <Hero />
         <TrustBar />
+        <About />
+        <Products />
 
         {[
-          ["about", "About"],
-          ["products", "Products"],
           ["why-us", "Why Us"],
           ["process", "Process"],
           ["contact", "Contact"],

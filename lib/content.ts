@@ -87,13 +87,16 @@ export const stats = [
   { value: 15, suffix: "+", label: "Years of Excellence", accent: false },
 ] as const;
 
-/** About section — paragraphs paraphrased directly from the brochure. */
+/** About section — paraphrased from the brochure, in plain language. */
 export const about = {
   paragraphs: [
-    "Hydro Mech Engineers is a young sheet metal company built on a strong vision: to deliver reliable and economical sheet metal solutions that meet real industrial demands.",
-    "We take pride in the quality of our machines and the service we provide. We use high-quality materials and components so that every machine is dependable and long-lasting.",
-    "We are devoted to manufacturing high-quality machines and press brake tools for sheet metal solutions, and we continually improve our products, quality and specifications to give our clients the best.",
-    "With excellent after-sales support, we maintain frequent contact with customers to address their requirements and build long-term relationships.",
+    "Hydro Mech Engineers is a sheet metal company with one clear goal: to deliver reliable and economical machines that meet real industrial demands.",
+    "We use high-quality materials and tested components, so every machine is dependable and built to last. We keep improving our products, and we stand behind them long after delivery.",
+  ],
+  values: [
+    "High-quality materials and components",
+    "Custom-built for your needs",
+    "Strong after-sales support",
   ],
   vision:
     "To deliver innovative products with superior quality and unmatched customer support.",
@@ -136,7 +139,7 @@ export const products = [
     name: "Hydro-Mechanical Sheet Rolling Machines",
     model: "HM-SR312",
     blurb:
-      "Asymmetrical 3-roll bending with high-strength steel rolls — easy operation for thin sheet bending.",
+      "Asymmetrical 3-roll bending with high-strength steel rolls for easy, accurate thin-sheet work.",
     points: ["3-roll design", "Hardened steel rolls", "Motor-driven bending"],
     image: "/products/plate-rolling.jpg",
   },
@@ -156,7 +159,7 @@ export const products = [
     blurb:
       "Precision-ground press brake tooling for accurate, consistent bending results.",
     points: ["Precision ground", "Consistent bends", "Made to spec"],
-    image: "/products/detail-bending.jpg",
+    image: "/products/detail-shearing.jpg",
   },
 ] as const;
 
