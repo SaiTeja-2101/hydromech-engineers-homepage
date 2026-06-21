@@ -34,7 +34,7 @@ export default function NavDropdown({ solid }: { solid: boolean }) {
           {products.map((product) => (
             <Link
               key={product.id}
-              href="#products"
+              href={`/products/${product.id}`}
               className="flex items-center justify-between gap-3 rounded-lg px-4 py-2.5 text-sm font-medium text-ink transition-colors hover:bg-mist hover:text-accent"
             >
               <span className="leading-snug">{product.name}</span>

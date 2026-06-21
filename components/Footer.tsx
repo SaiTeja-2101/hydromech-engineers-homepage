@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Icon } from "@iconify/react";
 import { site, products } from "@/lib/content";
 import Container from "./ui/Container";
@@ -13,10 +14,10 @@ const connect = [
 ];
 
 const company = [
-  { label: "About", href: "#about" },
-  { label: "Why Choose Us", href: "#why-us" },
-  { label: "Our Process", href: "#process" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Why Choose Us", href: "/#why-us" },
+  { label: "Our Process", href: "/#process" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const isExternal = (href: string) => href.startsWith("http");
@@ -52,7 +53,7 @@ export default function Footer() {
         {/* Machines */}
         <FooterCol title="Machines">
           {products.map((p) => (
-            <FooterLink key={p.id} href="#products">
+            <FooterLink key={p.id} href={`/products/${p.id}`}>
               {p.name}
             </FooterLink>
           ))}
@@ -152,13 +153,13 @@ function FooterLink({
 }) {
   return (
     <li>
-      <a
+      <Link
         href={href}
         className="group inline-flex items-center gap-2 text-base text-silver/80 transition hover:text-white"
       >
         <span className="h-px w-0 bg-accent transition-all duration-300 group-hover:w-4" />
         {children}
-      </a>
+      </Link>
     </li>
   );
 }

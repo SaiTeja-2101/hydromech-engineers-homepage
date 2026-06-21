@@ -10,10 +10,12 @@ import Logo from "./ui/Logo";
 import NavDropdown from "./ui/NavDropdown";
 import Button from "./ui/Button";
 
-export default function Header() {
+export default function Header({ forceSolid = false }: { forceSolid?: boolean }) {
   // `scrolled` flips the header from transparent-over-hero to frosted white.
+  // `forceSolid` keeps it solid from the top (used on light sub-pages).
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const solid = forceSolid || scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -36,28 +38,28 @@ export default function Header() {
       <div
         className={cn(
           "transition-all duration-300",
-          scrolled
+          solid
             ? "border-b border-line bg-white/85 backdrop-blur-md shadow-sm"
             : "bg-transparent",
         )}
       >
         <div className="mx-auto flex max-w-[1240px] items-center justify-between px-5 py-3 sm:px-8">
           <Link href="#home" aria-label="Hydro Mech Engineers — home">
-            <Logo tone={scrolled ? "light" : "dark"} />
+            <Logo tone={solid ? "light" : "dark"} />
           </Link>
 
           {/* Desktop nav */}
           <nav className="hidden items-center gap-7 lg:flex">
             {navLinks.map((link) =>
               link.label === "Products" ? (
-                <NavDropdown key={link.href} solid={scrolled} />
+                <NavDropdown key={link.href} solid={solid} />
               ) : (
                 <Link
                   key={link.href}
                   href={link.href}
                   className={cn(
                     "group relative text-sm font-semibold transition-colors",
-                    scrolled
+                    solid
                       ? "text-ink hover:text-accent"
                       : "text-white/90 hover:text-white",
                   )}
@@ -71,7 +73,7 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Button href="#contact" className="hidden sm:inline-flex">
+            <Button href="/#contact" className="hidden sm:inline-flex">
               Get a Quote
               <ArrowRight className="h-4 w-4" />
             </Button>
@@ -82,7 +84,7 @@ export default function Header() {
               aria-label="Open menu"
               className={cn(
                 "inline-flex h-10 w-10 items-center justify-center rounded-full transition-colors lg:hidden",
-                scrolled ? "text-ink hover:bg-mist" : "text-white hover:bg-white/10",
+                solid ? "text-ink hover:bg-mist" : "text-white hover:bg-white/10",
               )}
             >
               <Menu className="h-6 w-6" />
@@ -148,7 +150,7 @@ export default function Header() {
                   </Button>
                 </div>
                 <Button
-                  href="#contact"
+                  href="/#contact"
                   variant="white"
                   className="w-full"
                   onClick={() => setMenuOpen(false)}

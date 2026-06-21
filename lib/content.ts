@@ -27,13 +27,13 @@ export const site = {
     "https://www.google.com/maps/search/?api=1&query=Doddanekundi+Industrial+Area+Mahadevapura+Bangalore+560048",
 } as const;
 
-/** Primary navigation — anchors to on-page sections. */
+/** Primary navigation — root-relative so anchors work from any route. */
 export const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Products", href: "#products" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "Process", href: "#process" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Products", href: "/#products" },
+  { label: "Why Us", href: "/#why-us" },
+  { label: "Process", href: "/#process" },
+  { label: "Contact", href: "/#contact" },
 ] as const;
 
 /**
@@ -125,6 +125,38 @@ export const products = [
       "Efficient punching, bending and cutting of copper and aluminium bus bars in a single, easy-to-adjust unit.",
     points: ["Punch, bend & shear", "Copper & aluminium", "Quick station setup"],
     image: "/products/busbar-processing.jpg",
+    tagline: "Punch, bend and cut copper and aluminium bus bars on one machine.",
+    overview:
+      "The HMB-303 series gives one effective solution for punching, bending and cutting bus bars. Each station adjusts quickly to shorten setup time and improve production, and it handles both copper and aluminium. The machine is easy to move and maintain.",
+    highlights: [
+      "Three operations in one",
+      "Copper & aluminium",
+      "Up to 16T × W200 mm",
+      "5 HP motor",
+    ],
+    specs: [
+      { label: "Operations", value: "Punching, Bending, Shearing" },
+      { label: "Material", value: "Copper & Aluminium" },
+      { label: "Punching capacity", value: "Up to ø20 × 16T" },
+      { label: "Bending capacity", value: "Up to 16T × W200 mm" },
+      { label: "Shearing capacity", value: "Up to 16T × W200 mm" },
+      { label: "Stroke (punch / bend / shear)", value: "60 / 80 / 40 mm" },
+      { label: "Motor", value: "5 HP" },
+      { label: "Models", value: "HMB-303M (manual), HMB-303NC (NC bending)" },
+    ],
+    features: [
+      "Squaring arm for the shearing and bending stations",
+      "Fine manual stroke adjustment on the bending station",
+      "Manual gauge stopper on the punching station for faster work",
+      "NC option sets the bending angle by digital input",
+      "Vertical axis adjusts to the bus bar width (NC)",
+      "Easy to move and maintain",
+    ],
+    gallery: [
+      { src: "/products/detail-punching.jpg", caption: "Punching station" },
+      { src: "/products/detail-bending.jpg", caption: "Bending station" },
+      { src: "/products/detail-shearing.jpg", caption: "Shearing station" },
+    ],
   },
   {
     id: "clinching",
@@ -134,15 +166,76 @@ export const products = [
       "Strong, accurate fastener-insertion machines with a rigid, tensile-tested C-frame structure.",
     points: ["Hydraulic force 53 kN", "Throat depth 450 mm", "Safety protection"],
     image: "/products/clinching.jpg",
+    tagline: "Strong, repeatable fastener insertion on a rigid C-frame.",
+    overview:
+      "The HM-640 inserts fasteners into sheet metal with a hydraulic force of 53 kN and tight force repeatability of ±2%. Its C-frame is built from ultrasonically and tensile-tested IS:2062 grade steel for rigidity and minimal deflection, with a safety protection system and positive stop as standard.",
+    highlights: [
+      "Hydraulic force 53 kN",
+      "Force repeatability ±2%",
+      "Throat depth 450 mm",
+      "3 HP motor",
+    ],
+    specs: [
+      { label: "Drive", value: "Hydraulic" },
+      { label: "Output pressure", value: "0.5–4 T" },
+      { label: "Throat depth", value: "450 mm" },
+      { label: "Clinching capacity", value: "6 mm nut (below M8)" },
+      { label: "Holding time", value: "1–5 s" },
+      { label: "Open height", value: "250 mm" },
+      { label: "Anti-rotation die", value: "Yes" },
+      { label: "Safety protection", value: "Yes" },
+      { label: "Motor", value: "3 HP" },
+      { label: "Dimensions (L × W × H)", value: "950 × 950 × 2000 mm" },
+    ],
+    features: [
+      "Hydraulic force of 53 kN",
+      "Force repeatability within ±2%",
+      "Safety protection system",
+      "Positive stop function as standard",
+      "Ultrasonically and tensile-tested IS:2062 steel C-frame",
+      "Fastener insertion capacity below M8 of steel",
+    ],
+    gallery: [
+      { src: "/products/detail-clinching.jpg", caption: "Clinching station" },
+    ],
   },
   {
     id: "section-bending",
     name: "Hydraulic Section Bending Machines",
-    model: "Section Bender",
+    model: "HM-SB Series",
     blurb:
       "Precision bending of profiles and sections for versatile fabrication applications.",
     points: ["Accurate profile bends", "Robust construction", "Versatile use"],
     image: "/products/section-bending.jpg",
+    tagline: "Three-roll bending for pipes, angles, flats and profiles.",
+    overview:
+      "A hydraulic three-roll section bending machine for round pipe, square and rectangular pipe, angle and flat bar. The HV series works in both horizontal and vertical orientation, with hardened rolls, quick roll change and a welded steel frame that a semi-skilled operator can run.",
+    highlights: [
+      "Round, square & rectangular pipe",
+      "Angle & flat bar",
+      "Horizontal & vertical operation",
+      "Hardened rolls",
+    ],
+    specs: [
+      { label: "Round pipe", value: "ø50 × 3 mm · ø75 × 5 mm" },
+      { label: "Square pipe", value: "50 × 50 × 3 mm · 75 × 75 × 5 mm" },
+      { label: "Rectangular pipe", value: "60 × 40 × 3 mm · 80 × 60 × 5 mm" },
+      { label: "Angle", value: "50 × 5 mm · 50 × 6 mm" },
+      { label: "Flat bar", value: "50 × 10 mm · 60 × 10 mm" },
+      { label: "Operation", value: "Horizontal & vertical (HV series)" },
+      { label: "Motor", value: "3 HP · 5 HP" },
+      { label: "Models", value: "HM-SB50, HM-SB75" },
+    ],
+    features: [
+      "Horizontal and vertical operation (HV series)",
+      "Manual adjustment of the upper roll",
+      "Foot-switch control with reverse and forward",
+      "Hardened rolls for standard profiles",
+      "Easy and quick roll change",
+      "Hardened and ground shafts running in roller bearings",
+      "Welded steel frame, runs with a semi-skilled operator",
+    ],
+    gallery: [],
   },
   {
     id: "sheet-rolling",
@@ -152,15 +245,70 @@ export const products = [
       "Asymmetrical 3-roll bending with high-strength steel rolls for easy, accurate thin-sheet work.",
     points: ["3-roll design", "Hardened steel rolls", "Motor-driven bending"],
     image: "/products/plate-rolling.jpg",
+    tagline: "Asymmetrical three-roll slip rolling for thin steel sheet.",
+    overview:
+      "An asymmetrical three-roll slip rolling machine for bending thin steel sheet. Motor driven with high-strength steel rolls, a fixed top roller and adjustable lower and rear rollers, plus a quick-release top roller to free the finished workpiece.",
+    highlights: [
+      "Asymmetrical 3-roll design",
+      "Up to 3 mm × 1500 mm",
+      "High-strength steel rolls",
+      "Quick-release top roller",
+    ],
+    specs: [
+      { label: "Max rolling thickness", value: "2 / 3 / 3 mm" },
+      { label: "Max rolling width", value: "1200 / 1200 / 1500 mm" },
+      { label: "Roll diameter", value: "90 / 100 / 115 mm" },
+      { label: "Min rolling diameter", value: "110 / 120 / 145 mm" },
+      { label: "Motor", value: "2 / 3 / 3 HP" },
+      { label: "Models", value: "HM-SR212, HM-SR312, HM-SR315" },
+    ],
+    features: [
+      "Easy to operate for thin steel sheet bending",
+      "Motor driven for bending",
+      "Top roller raises and lowers to discharge the workpiece",
+      "Fixed top roller with adjustable lower and rear rollers",
+      "Worm gear and motor for pre-bending",
+      "Quick-release top roller",
+    ],
+    gallery: [],
   },
   {
     id: "c-h-frame",
     name: "Hydraulic C-Frame & H-Frame Machines",
-    model: "Press Frames",
+    model: "HM-BM / PM20",
     blurb:
       "High-strength press frames engineered for rigidity and dependable industrial pressing.",
     points: ["Rigid frame", "Repeatable force", "Industrial duty"],
     image: "/products/busbar-punching.jpg",
+    tagline: "Compact, rigid presses for fast single-station work.",
+    overview:
+      "Compact, portable C-frame presses for quick, accurate single-station bending and punching, plus larger H-frame presses built to your needs. Light and easy to move, with inexpensive tooling and low maintenance, built on rigid tensile-tested steel frames.",
+    highlights: [
+      "Single-station bending & punching",
+      "Copper & aluminium",
+      "Compact & portable",
+      "Low maintenance",
+    ],
+    specs: [
+      { label: "Bending (HM-BM20)", value: "Copper 10T × W200 · Aluminium 14T × W200 mm" },
+      { label: "Bending stroke / motor", value: "80 mm · 2 HP" },
+      { label: "Punching (HM-PM20)", value: "Copper ø14 × 12T · Aluminium ø16 × 14T" },
+      { label: "Punching stroke / motor", value: "60 mm · 2 HP" },
+      { label: "Frame", value: "Rigid tensile-tested steel (C & H frame)" },
+      { label: "Build", value: "Single-station; H-frame to spec" },
+    ],
+    features: [
+      "Speedy and accurate bends and punches",
+      "Stroke control for a pre-set degree of bend",
+      "Manual gauge bar stoppers for positioning",
+      "Inexpensive tooling",
+      "Compact and light, easy to move and maintain",
+      "Low maintenance requirement",
+    ],
+    gallery: [
+      { src: "/products/busbar-bending.jpg", caption: "Bending press" },
+      { src: "/products/busbar-punching.jpg", caption: "Punching press" },
+    ],
   },
   {
     id: "press-brake-tools",
@@ -170,6 +318,31 @@ export const products = [
       "Precision-ground press brake tooling for accurate, consistent bending results.",
     points: ["Precision ground", "Consistent bends", "Made to spec"],
     image: "/products/detail-shearing.jpg",
+    tagline: "Precision-ground tooling for accurate, repeatable bends.",
+    overview:
+      "Precision-ground press brake tooling, punches and dies, made for CNC and conventional press brakes. We manufacture standard and custom profiles to your bending requirements so you get accurate, consistent results, bend after bend.",
+    highlights: [
+      "Precision ground",
+      "Standard & custom profiles",
+      "CNC & conventional brakes",
+      "Consistent results",
+    ],
+    specs: [
+      { label: "Tooling", value: "Punches & dies" },
+      { label: "Manufacture", value: "Precision ground" },
+      { label: "Material", value: "Hardened tool steel" },
+      { label: "Compatibility", value: "CNC & conventional press brakes" },
+      { label: "Profiles", value: "Standard & custom" },
+      { label: "Made to", value: "Your bending requirements" },
+    ],
+    features: [
+      "Precision-ground for accuracy",
+      "Standard and custom profiles",
+      "Hardened tool steel for long life",
+      "Consistent, repeatable bends",
+      "Made to your press brake and bending specs",
+    ],
+    gallery: [],
   },
 ] as const;
 
