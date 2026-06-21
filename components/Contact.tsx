@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Phone, MessageCircle, Mail, MapPin, Check } from "lucide-react";
+import { Icon } from "@iconify/react";
 import { site, products } from "@/lib/content";
 import Container from "./ui/Container";
 import Reveal from "./ui/Reveal";
@@ -10,15 +10,15 @@ import Reveal from "./ui/Reveal";
 type Errors = Partial<Record<"name" | "email" | "message", string>>;
 
 const infoRows = [
-  { icon: Phone, label: "Call us", value: site.phone, href: site.phoneHref },
+  { icon: "solar:phone-bold", label: "Call us", value: site.phone, href: site.phoneHref },
   {
-    icon: MessageCircle,
+    icon: "mdi:whatsapp",
     label: "WhatsApp",
     value: site.phone,
     href: site.whatsappHref,
   },
-  { icon: Mail, label: "Email", value: site.email, href: site.emailHref },
-  { icon: MapPin, label: "Visit us", value: site.address, href: site.mapUrl },
+  { icon: "solar:letter-bold", label: "Email", value: site.email, href: site.emailHref },
+  { icon: "solar:map-point-bold", label: "Visit us", value: site.address, href: site.mapUrl },
 ] as const;
 
 export default function Contact() {
@@ -69,10 +69,10 @@ export default function Contact() {
 
       <Container className="relative z-10">
         <Reveal className="max-w-2xl">
-          <span className="text-[0.8rem] font-semibold uppercase tracking-[0.22em] text-accent">
+          <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent sm:text-base lg:text-lg">
             Contact Us
           </span>
-          <h2 className="mt-3 font-display text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
+          <h2 className="mt-3 font-display text-3xl font-bold leading-[1.05] tracking-tight text-white sm:text-4xl md:text-5xl">
             Let&apos;s Talk About Your Machine
           </h2>
           <p className="mt-4 text-base leading-relaxed text-silver sm:text-lg">
@@ -92,7 +92,7 @@ export default function Contact() {
             </p>
 
             <ul className="mt-8 space-y-5">
-              {infoRows.map(({ icon: Icon, label, value, href }) => (
+              {infoRows.map(({ icon, label, value, href }) => (
                 <li key={label}>
                   <a
                     href={href}
@@ -100,14 +100,14 @@ export default function Contact() {
                     rel={label === "Visit us" ? "noopener noreferrer" : undefined}
                     className="group flex items-start gap-4"
                   >
-                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/15 text-accent transition group-hover:bg-accent group-hover:text-white">
-                      <Icon className="h-5 w-5" />
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/12 text-accent transition duration-200 group-hover:-translate-y-0.5 group-hover:bg-accent/20">
+                      <Icon icon={icon} className="h-5 w-5" />
                     </span>
                     <span className="min-w-0">
                       <span className="block text-[0.7rem] font-semibold uppercase tracking-wider text-silver/60">
                         {label}
                       </span>
-                      <span className="mt-0.5 block text-[0.95rem] leading-snug text-white transition group-hover:text-accent">
+                      <span className="mt-0.5 block text-[0.95rem] leading-snug text-white">
                         {value}
                       </span>
                     </span>
@@ -122,7 +122,7 @@ export default function Contact() {
             {sent ? (
               <div className="flex h-full min-h-[20rem] flex-col items-center justify-center text-center">
                 <span className="flex h-14 w-14 items-center justify-center rounded-full bg-accent/15 text-accent">
-                  <Check className="h-7 w-7" strokeWidth={3} />
+                  <Icon icon="solar:check-circle-bold" className="h-8 w-8" />
                 </span>
                 <h3 className="mt-5 font-display text-2xl font-bold text-ink">
                   Thanks, we&apos;ll be in touch.

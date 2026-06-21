@@ -5,7 +5,7 @@ type Variant = "primary" | "outline" | "ghost" | "white";
 
 // Sharper 6px corners read as "engineered/industrial" rather than soft SaaS pills.
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold tracking-wide transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2";
+  "inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold tracking-wide transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2";
 
 const variants: Record<Variant, string> = {
   // Solid burnt orange — primary call to action
@@ -46,7 +46,7 @@ export default function Button({
   }
 
   return (
-    <Link href={href} className={cn(base, variants[variant], className)}>
+    <Link href={href} className={cn(base, variants[variant], className)} {...props}>
       {children}
     </Link>
   );

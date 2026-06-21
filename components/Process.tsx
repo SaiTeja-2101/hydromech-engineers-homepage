@@ -23,7 +23,7 @@ export default function Process() {
         <div className="relative mt-16 hidden grid-cols-4 gap-8 lg:grid">
           <div
             aria-hidden
-            className="absolute left-0 top-[7px] h-px w-full bg-line"
+            className="absolute left-0 right-1/4 top-[7px] h-px bg-line"
           />
           {processSteps.map((s, i) => (
             <Reveal key={s.title} index={i} className="relative">

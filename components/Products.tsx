@@ -52,10 +52,10 @@ export default function Products() {
         <div className="lg:grid lg:grid-cols-[minmax(0,360px)_1fr] lg:gap-x-16">
           {/* Left — sticky index */}
           <div className="lg:sticky lg:top-28 lg:self-start lg:h-fit">
-            <span className="text-[0.8rem] font-semibold uppercase tracking-[0.22em] text-accent">
+            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent sm:text-base lg:text-lg">
               Products &amp; Services
             </span>
-            <h2 className="mt-4 font-display text-4xl font-bold leading-[1.02] tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h2 className="mt-4 font-display text-3xl font-bold leading-[1.05] tracking-tight text-white sm:text-4xl md:text-5xl">
               Our Machines
             </h2>
             <p className="mt-4 max-w-sm text-base leading-relaxed text-silver/80">

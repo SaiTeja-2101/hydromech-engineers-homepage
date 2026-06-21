@@ -66,10 +66,10 @@ export default function WhyChooseUs() {
         )}
       >
         <Container className={cn("shrink-0", pin && "pt-24")}>
-          <span className="text-[0.8rem] font-semibold uppercase tracking-[0.22em] text-accent">
+          <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent sm:text-base lg:text-lg">
             Why Choose Us
           </span>
-          <h2 className="mt-3 max-w-3xl font-display text-4xl font-bold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl">
+          <h2 className="mt-3 max-w-3xl font-display text-3xl font-bold leading-[1.05] tracking-tight text-ink sm:text-4xl md:text-5xl">
             Why Partner with Hydro Mech Engineers?
           </h2>
           <p className="mt-3 max-w-xl text-base leading-relaxed text-steel sm:text-lg">
@@ -85,7 +85,7 @@ export default function WhyChooseUs() {
             className={
               pin
                 ? "flex gap-6"
-                : "-mx-5 flex snap-x snap-mandatory gap-5 overflow-x-auto px-5 pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                : "flex snap-x snap-mandatory gap-5 overflow-x-auto px-5 pb-6 sm:px-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             }
           >
             {features.map((f, i) => (

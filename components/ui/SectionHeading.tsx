@@ -29,12 +29,12 @@ export default function SectionHeading({
         className,
       )}
     >
-      <span className="text-[0.8rem] font-semibold uppercase tracking-[0.2em] text-accent">
+      <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent sm:text-base lg:text-lg">
         {eyebrow}
       </span>
       <h2
         className={cn(
-          "font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl",
+          "font-display text-3xl font-bold leading-[1.05] tracking-tight sm:text-4xl md:text-5xl",
           isDark ? "text-white" : "text-ink",
         )}
       >

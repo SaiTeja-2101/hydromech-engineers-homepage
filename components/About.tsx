@@ -16,10 +16,10 @@ export default function About() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Text */}
           <Reveal>
-            <span className="text-[0.8rem] font-semibold uppercase tracking-[0.22em] text-accent">
+            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent sm:text-base lg:text-lg">
               About Us
             </span>
-            <h2 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl">
+            <h2 className="mt-4 font-display text-3xl font-bold leading-[1.05] tracking-tight text-ink sm:text-4xl md:text-5xl">
               {about.headline}
             </h2>
 
