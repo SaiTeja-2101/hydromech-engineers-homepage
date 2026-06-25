@@ -6,8 +6,6 @@ import { products, site } from "@/lib/content";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 
 // Only the six known machines exist; anything else 404s (fully static).
 export const dynamicParams = false;
@@ -68,9 +66,7 @@ export default async function ProductPage({
   if (!product) notFound();
 
   return (
-    <>
-      <Header forceSolid />
-      <main>
+    <main>
         {/* Hero */}
         <section className="bg-white pt-32 pb-16 sm:pt-36 sm:pb-20">
           <Container>
@@ -254,8 +250,6 @@ export default async function ProductPage({
             </Reveal>
           </Container>
         </section>
-      </main>
-      <Footer />
-    </>
+    </main>
   );
 }

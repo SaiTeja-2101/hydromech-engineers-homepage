@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, Phone, Mail, ArrowRight, MessageCircle } from "lucide-react";
 import { navLinks, site } from "@/lib/content";
@@ -10,12 +11,14 @@ import Logo from "./ui/Logo";
 import NavDropdown from "./ui/NavDropdown";
 import Button from "./ui/Button";
 
-export default function Header({ forceSolid = false }: { forceSolid?: boolean }) {
+export default function Header() {
   // `scrolled` flips the header from transparent-over-hero to frosted white.
-  // `forceSolid` keeps it solid from the top (used on light sub-pages).
+  // Only the homepage has a dark hero behind a transparent header; every other
+  // route starts on a light background, so the header is solid from the top.
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const solid = forceSolid || scrolled;
+  const solid = pathname !== "/" || scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);

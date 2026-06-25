@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, DM_Sans } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 // Display font for headings — geometric, confident, distinctive (not a default).
 const spaceGrotesk = Space_Grotesk({
@@ -50,7 +52,9 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-white font-sans text-ink">
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
