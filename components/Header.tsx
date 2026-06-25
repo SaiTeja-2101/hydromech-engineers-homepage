@@ -47,7 +47,7 @@ export default function Header() {
         )}
       >
         <div className="mx-auto flex max-w-[1240px] items-center justify-between px-5 py-3 sm:px-8">
-          <Link href="#home" aria-label="Hydro Mech Engineers — home">
+          <Link href="/" aria-label="Hydro Mech Engineers — home">
             <Logo tone={solid ? "light" : "dark"} />
           </Link>
 

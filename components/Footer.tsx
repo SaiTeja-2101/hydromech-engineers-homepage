@@ -14,7 +14,7 @@ const connect = [
 ];
 
 const company = [
-  { label: "About", href: "/#about" },
+  { label: "About", href: "/about-us" },
   { label: "Why Choose Us", href: "/#why-us" },
   { label: "Our Process", href: "/#process" },
   { label: "Contact", href: "/#contact" },

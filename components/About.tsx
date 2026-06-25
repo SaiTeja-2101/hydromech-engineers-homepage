@@ -9,7 +9,7 @@ import Button from "./ui/Button";
  * values (01/02/03) + vision quote + button. Right = real flagship machine on a
  * clean light stage with a "15+ Years" chip. No lucide icons anywhere here.
  */
-export default function About() {
+export default function About({ showMoreLink = true }: { showMoreLink?: boolean }) {
   return (
     <section id="about" className="overflow-x-clip bg-white py-20 sm:py-28">
       <Container>
@@ -55,9 +55,14 @@ export default function About() {
               “{about.vision}”
             </blockquote>
 
-            <Button href="#products" className="mt-9">
-              Discover Our Machines →
-            </Button>
+            <div className="mt-9 flex flex-wrap gap-4">
+              <Button href="/#products">Discover Our Machines →</Button>
+              {showMoreLink && (
+                <Button href="/about-us" variant="outline">
+                  More about us →
+                </Button>
+              )}
+            </div>
           </Reveal>
 
           {/* Visual */}
