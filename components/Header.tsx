@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, Phone, Mail, ArrowRight, MessageCircle } from "lucide-react";
-import { navLinks, site } from "@/lib/content";
+import { Menu, X, Phone, Mail, ArrowRight, MessageCircle, ChevronDown } from "lucide-react";
+import { navLinks, products, site } from "@/lib/content";
 import { cn } from "@/lib/utils";
 import Logo from "./ui/Logo";
 import NavDropdown from "./ui/NavDropdown";
@@ -22,6 +22,7 @@ export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
   const solid = !isTransparentHeroRoute(pathname) || scrolled;
 
   // Route-level active state. Home-section anchors (/#...) are not pages.
@@ -155,10 +156,72 @@ export default function Header() {
                 </button>
               </div>
 
-              <nav className="mt-8 flex flex-col gap-1">
+              <nav className="mt-8 flex flex-col gap-1 overflow-y-auto">
                 {navLinks.map((link) => {
-                  const active =
-                    link.label === "Products" ? productsActive : isActive(link.href);
+                  // Products = an expandable accordion of the machine pages.
+                  if (link.label === "Products") {
+                    return (
+                      <div key={link.href}>
+                        <button
+                          onClick={() => setMobileProductsOpen((o) => !o)}
+                          aria-expanded={mobileProductsOpen}
+                          className={cn(
+                            "relative flex w-full items-center justify-between rounded-xl px-4 py-3 text-lg font-medium transition-colors",
+                            productsActive
+                              ? "bg-white/10 text-accent"
+                              : "text-white/90 hover:bg-white/5 hover:text-white",
+                          )}
+                        >
+                          {productsActive && (
+                            <span className="absolute left-0 top-1/2 h-6 w-1 -translate-y-1/2 rounded-full bg-accent" />
+                          )}
+                          Products
+                          <ChevronDown
+                            className={cn(
+                              "h-5 w-5 transition-transform duration-300",
+                              mobileProductsOpen && "rotate-180",
+                            )}
+                          />
+                        </button>
+
+                        <AnimatePresence initial={false}>
+                          {mobileProductsOpen && (
+                            <motion.ul
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                              className="overflow-hidden"
+                            >
+                              {products.map((p) => {
+                                const href = `/products/${p.id}`;
+                                const current = pathname === href;
+                                return (
+                                  <li key={p.id}>
+                                    <Link
+                                      href={href}
+                                      onClick={() => setMenuOpen(false)}
+                                      aria-current={current ? "page" : undefined}
+                                      className={cn(
+                                        "block rounded-lg py-2.5 pl-8 pr-4 text-base leading-snug transition-colors",
+                                        current
+                                          ? "text-accent"
+                                          : "text-silver/80 hover:text-white",
+                                      )}
+                                    >
+                                      {p.name}
+                                    </Link>
+                                  </li>
+                                );
+                              })}
+                            </motion.ul>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    );
+                  }
+
+                  const active = isActive(link.href);
                   return (
                     <Link
                       key={link.href}
