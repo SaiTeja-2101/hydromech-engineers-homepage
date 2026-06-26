@@ -142,16 +142,17 @@ export default async function ProductPage({
                 aria-hidden
                 className="absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-2xl bg-accent/10"
               />
-              <div className="group relative overflow-hidden rounded-2xl border border-line bg-mist p-6 shadow-xl shadow-ink/5 sm:p-10">
-                <span
-                  aria-hidden
-                  className="pointer-events-none absolute right-5 top-3 select-none whitespace-nowrap font-display text-5xl font-bold leading-none tracking-tight text-ink/[0.04] sm:text-6xl"
-                >
-                  {product.model}
-                </span>
+              <div
+                className="group relative overflow-hidden rounded-2xl border border-line p-6 shadow-xl shadow-ink/5 sm:p-10"
+                style={{
+                  background:
+                    "radial-gradient(125% 115% at 50% 22%, #ffffff 0%, #f4f5f8 55%, #e6e9ef 100%)",
+                }}
+              >
+                {/* soft floor shadow to ground the machine */}
                 <div
                   aria-hidden
-                  className="pointer-events-none absolute bottom-8 left-1/2 h-12 w-3/5 -translate-x-1/2 rounded-[50%] bg-ink/10 blur-2xl"
+                  className="pointer-events-none absolute bottom-7 left-1/2 h-12 w-3/5 -translate-x-1/2 rounded-[50%] bg-ink/15 blur-2xl"
                 />
                 <div className="relative aspect-[4/3] w-full">
                   <Image
