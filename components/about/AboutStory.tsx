@@ -78,14 +78,14 @@ export default function AboutStory() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-15%" }}
               transition={{ duration: 0.6, delay: 0.1, ease: EASE }}
-              className="mt-10 grid grid-cols-3 gap-6"
+              className="mt-10 grid grid-cols-3 gap-4 sm:gap-6"
             >
               {story.stats.map((s) => (
                 <div key={s.label} className="border-t-2 border-accent pt-3">
-                  <dd className="font-display text-3xl font-bold leading-none tracking-tight text-ink sm:text-4xl">
+                  <dd className="font-display text-2xl font-bold leading-none tracking-tight text-ink sm:text-3xl md:text-4xl">
                     {s.value}
                   </dd>
-                  <dt className="mt-2 text-[0.7rem] font-semibold uppercase leading-tight tracking-wider text-steel sm:text-xs">
+                  <dt className="mt-2 text-[0.65rem] font-semibold uppercase leading-tight tracking-wider text-steel sm:text-xs">
                     {s.label}
                   </dt>
                 </div>

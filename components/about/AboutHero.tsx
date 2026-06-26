@@ -47,7 +47,7 @@ export default function AboutHero() {
   return (
     <section
       ref={ref}
-      className="relative flex min-h-[92svh] items-center overflow-hidden bg-ink"
+      className="relative flex min-h-[88svh] items-center overflow-hidden bg-ink"
     >
       {/* Background photo: slow zoom + scroll parallax */}
       <motion.div style={{ y: bgY }} className="absolute inset-0">
@@ -89,7 +89,7 @@ export default function AboutHero() {
       {/* darken further as you scroll into the page */}
       <motion.div style={{ opacity: fade }} className="absolute inset-0 bg-ink" />
 
-      <Container className="relative z-10 w-full py-32 sm:py-36">
+      <Container className="relative z-10 w-full py-24 sm:py-36">
         {/* breadcrumb */}
         <motion.nav
           initial={{ opacity: 0 }}
@@ -113,12 +113,12 @@ export default function AboutHero() {
             {hero.eyebrow}
           </motion.span>
 
-          <h1 className="mt-6 max-w-5xl font-display text-[clamp(2.5rem,6vw,4.75rem)] font-bold leading-[1.04] tracking-tight text-white">
+          <h1 className="mt-6 max-w-5xl font-display text-[clamp(1.9rem,7vw,4.75rem)] font-bold leading-[1.06] tracking-tight text-white">
             {hero.headline.map((line, li) => (
               <motion.span key={li} variants={lineUp} className="block">
                 {line.map((seg, si) =>
                   "highlight" in seg && seg.highlight ? (
-                    <span key={si} className="relative whitespace-pre text-accent">
+                    <span key={si} className="relative inline-block text-accent">
                       {seg.text}
                       <motion.span
                         aria-hidden
@@ -129,9 +129,7 @@ export default function AboutHero() {
                       />
                     </span>
                   ) : (
-                    <span key={si} className="whitespace-pre">
-                      {seg.text}
-                    </span>
+                    <span key={si}>{seg.text}</span>
                   ),
                 )}
               </motion.span>
