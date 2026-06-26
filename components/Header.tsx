@@ -23,6 +23,15 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const solid = !TRANSPARENT_HERO_ROUTES.has(pathname) || scrolled;
 
+  // Route-level active state. Home-section anchors (/#...) are not pages.
+  const isActive = (href: string) =>
+    href === "/"
+      ? pathname === "/"
+      : href.startsWith("/#")
+        ? false
+        : pathname === href || pathname.startsWith(href + "/");
+  const productsActive = pathname.startsWith("/products");
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
@@ -58,22 +67,37 @@ export default function Header() {
           <nav className="hidden items-center gap-7 lg:flex">
             {navLinks.map((link) =>
               link.label === "Products" ? (
-                <NavDropdown key={link.href} solid={solid} />
+                <NavDropdown key={link.href} solid={solid} active={productsActive} />
               ) : (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={cn(
-                    "group relative text-sm font-semibold transition-colors",
-                    solid
-                      ? "text-ink hover:text-accent"
-                      : "text-white/90 hover:text-white",
-                  )}
-                >
-                  {link.label}
-                  {/* animated underline */}
-                  <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-accent transition-all duration-300 group-hover:w-full" />
-                </Link>
+                (() => {
+                  const active = isActive(link.href);
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      aria-current={active ? "page" : undefined}
+                      className={cn(
+                        "group relative text-sm font-semibold transition-colors",
+                        solid
+                          ? active
+                            ? "text-accent"
+                            : "text-ink hover:text-accent"
+                          : active
+                            ? "text-white"
+                            : "text-white/90 hover:text-white",
+                      )}
+                    >
+                      {link.label}
+                      {/* active = persistent underline, otherwise animate on hover */}
+                      <span
+                        className={cn(
+                          "absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300",
+                          active ? "w-full" : "w-0 group-hover:w-full",
+                        )}
+                      />
+                    </Link>
+                  );
+                })()
               ),
             )}
           </nav>
@@ -131,16 +155,29 @@ export default function Header() {
               </div>
 
               <nav className="mt-8 flex flex-col gap-1">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setMenuOpen(false)}
-                    className="rounded-xl px-4 py-3 text-lg font-medium text-white/90 transition-colors hover:bg-white/5 hover:text-white"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                {navLinks.map((link) => {
+                  const active =
+                    link.label === "Products" ? productsActive : isActive(link.href);
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setMenuOpen(false)}
+                      aria-current={active ? "page" : undefined}
+                      className={cn(
+                        "relative rounded-xl px-4 py-3 text-lg font-medium transition-colors",
+                        active
+                          ? "bg-white/10 text-accent"
+                          : "text-white/90 hover:bg-white/5 hover:text-white",
+                      )}
+                    >
+                      {active && (
+                        <span className="absolute left-0 top-1/2 h-6 w-1 -translate-y-1/2 rounded-full bg-accent" />
+                      )}
+                      {link.label}
+                    </Link>
+                  );
+                })}
               </nav>
 
               <div className="mt-auto flex flex-col gap-3 border-t border-white/10 pt-6">

@@ -29,6 +29,7 @@ export const site = {
 
 /** Primary navigation — root-relative so anchors work from any route. */
 export const navLinks = [
+  { label: "Home", href: "/" },
   { label: "About", href: "/about-us" },
   { label: "Products", href: "/#products" },
   { label: "Why Us", href: "/#why-us" },

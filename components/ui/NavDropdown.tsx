@@ -10,20 +10,38 @@ import { cn } from "@/lib/utils";
  * Opens on hover and on keyboard focus (focus-within) for accessibility;
  * no extra JS state needed.
  */
-export default function NavDropdown({ solid }: { solid: boolean }) {
+export default function NavDropdown({
+  solid,
+  active = false,
+}: {
+  solid: boolean;
+  active?: boolean;
+}) {
   return (
     <div className="group relative">
       <button
-        className={cn(
-          "inline-flex items-center gap-1 text-sm font-semibold transition-colors",
-          solid
-            ? "text-ink hover:text-accent"
-            : "text-white/90 hover:text-white",
-        )}
         aria-haspopup="true"
+        aria-current={active ? "page" : undefined}
+        className={cn(
+          "relative inline-flex items-center gap-1 text-sm font-semibold transition-colors",
+          solid
+            ? active
+              ? "text-accent"
+              : "text-ink hover:text-accent"
+            : active
+              ? "text-white"
+              : "text-white/90 hover:text-white",
+        )}
       >
         Products
         <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
+        {/* active underline (sits under the label, ignores the chevron width) */}
+        <span
+          className={cn(
+            "absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300",
+            active ? "w-[calc(100%-1.25rem)]" : "w-0 group-hover:w-[calc(100%-1.25rem)]",
+          )}
+        />
       </button>
 
       {/* Panel */}
