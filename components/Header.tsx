@@ -12,7 +12,8 @@ import NavDropdown from "./ui/NavDropdown";
 import Button from "./ui/Button";
 
 // Routes with a dark full-bleed hero behind a transparent header.
-const TRANSPARENT_HERO_ROUTES = new Set(["/", "/about-us"]);
+const isTransparentHeroRoute = (pathname: string) =>
+  pathname === "/" || pathname === "/about-us" || pathname.startsWith("/products");
 
 export default function Header() {
   // `scrolled` flips the header from transparent-over-hero to frosted white.
@@ -21,7 +22,7 @@ export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const solid = !TRANSPARENT_HERO_ROUTES.has(pathname) || scrolled;
+  const solid = !isTransparentHeroRoute(pathname) || scrolled;
 
   // Route-level active state. Home-section anchors (/#...) are not pages.
   const isActive = (href: string) =>

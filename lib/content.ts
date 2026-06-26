@@ -197,6 +197,8 @@ export const products = [
       "Efficient punching, bending and cutting of copper and aluminium bus bars in a single, easy-to-adjust unit.",
     points: ["Punch, bend & shear", "Copper & aluminium", "Quick station setup"],
     image: "/products/busbar-processing.jpg",
+    heroImage: "/products/banners/bus-bar.jpg",
+    heroAlt: "Hydro Mech hydraulic bus bar processing machine on the factory floor",
     tagline: "Punch, bend and cut copper and aluminium bus bars on one machine.",
     overview:
       "The HMB-303 series gives one effective solution for punching, bending and cutting bus bars. Each station adjusts quickly to shorten setup time and improve production, and it handles both copper and aluminium. The machine is easy to move and maintain.",
@@ -238,6 +240,8 @@ export const products = [
       "Strong, accurate fastener-insertion machines with a rigid, tensile-tested C-frame structure.",
     points: ["Hydraulic force 53 kN", "Throat depth 450 mm", "Safety protection"],
     image: "/products/clinching.jpg",
+    heroImage: "/products/banners/clinching.webp",
+    heroAlt: "Hydro Mech hydraulic clinching machine",
     tagline: "Strong, repeatable fastener insertion on a rigid C-frame.",
     overview:
       "The HM-640 inserts fasteners into sheet metal with a hydraulic force of 53 kN and tight force repeatability of ±2%. Its C-frame is built from ultrasonically and tensile-tested IS:2062 grade steel for rigidity and minimal deflection, with a safety protection system and positive stop as standard.",
@@ -279,6 +283,8 @@ export const products = [
       "Precision bending of profiles and sections for versatile fabrication applications.",
     points: ["Accurate profile bends", "Robust construction", "Versatile use"],
     image: "/products/section-bending.jpg",
+    heroImage: "/products/banners/section-bending.jpg",
+    heroAlt: "Hydro Mech hydraulic section bending machine in the workshop",
     tagline: "Three-roll bending for pipes, angles, flats and profiles.",
     overview:
       "A hydraulic three-roll section bending machine for round pipe, square and rectangular pipe, angle and flat bar. The HV series works in both horizontal and vertical orientation, with hardened rolls, quick roll change and a welded steel frame that a semi-skilled operator can run.",
@@ -317,6 +323,8 @@ export const products = [
       "Asymmetrical 3-roll bending with high-strength steel rolls for easy, accurate thin-sheet work.",
     points: ["3-roll design", "Hardened steel rolls", "Motor-driven bending"],
     image: "/products/plate-rolling.jpg",
+    heroImage: "/products/banners/sheet-rolling.jpg",
+    heroAlt: "Hydro Mech hydro-mechanical sheet rolling machine",
     tagline: "Asymmetrical three-roll slip rolling for thin steel sheet.",
     overview:
       "An asymmetrical three-roll slip rolling machine for bending thin steel sheet. Motor driven with high-strength steel rolls, a fixed top roller and adjustable lower and rear rollers, plus a quick-release top roller to free the finished workpiece.",
@@ -352,6 +360,8 @@ export const products = [
       "High-strength press frames engineered for rigidity and dependable industrial pressing.",
     points: ["Rigid frame", "Repeatable force", "Industrial duty"],
     image: "/products/busbar-punching.jpg",
+    heroImage: "/products/banners/c-h-frame.jpg",
+    heroAlt: "Hydro Mech hydraulic C-frame press machines",
     tagline: "Compact, rigid presses for fast single-station work.",
     overview:
       "Compact, portable C-frame presses for quick, accurate single-station bending and punching, plus larger H-frame presses built to your needs. Light and easy to move, with inexpensive tooling and low maintenance, built on rigid tensile-tested steel frames.",
@@ -390,6 +400,8 @@ export const products = [
       "Precision-ground press brake tooling for accurate, consistent bending results.",
     points: ["Precision ground", "Consistent bends", "Made to spec"],
     image: "/products/detail-shearing.jpg",
+    heroImage: "/products/banners/press-brake-tools.jpg",
+    heroAlt: "CNC press brake tooling, punches and dies",
     tagline: "Precision-ground tooling for accurate, repeatable bends.",
     overview:
       "Precision-ground press brake tooling, punches and dies, made for CNC and conventional press brakes. We manufacture standard and custom profiles to your bending requirements so you get accurate, consistent results, bend after bend.",

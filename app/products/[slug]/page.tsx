@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
+import ProductHero from "@/components/products/ProductHero";
 
 // Only the six known machines exist; anything else 404s (fully static).
 export const dynamicParams = false;
@@ -58,14 +59,6 @@ function Eyebrow({ children }: { children: React.ReactNode }) {
   );
 }
 
-const gridBg = {
-  backgroundImage:
-    "linear-gradient(to right, rgba(20,23,28,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(20,23,28,0.04) 1px, transparent 1px)",
-  backgroundSize: "44px 44px",
-  maskImage: "radial-gradient(120% 80% at 100% 0%, black 0%, transparent 60%)",
-  WebkitMaskImage: "radial-gradient(120% 80% at 100% 0%, black 0%, transparent 60%)",
-} as const;
-
 export default async function ProductPage({
   params,
 }: {
@@ -79,55 +72,18 @@ export default async function ProductPage({
 
   return (
     <main>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-white pt-32 pb-16 sm:pt-36 sm:pb-20">
-        <div aria-hidden className="pointer-events-none absolute inset-0 opacity-60" style={gridBg} />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -right-32 -top-24 h-[34rem] w-[34rem] rounded-full bg-accent/5 blur-3xl"
-        />
+      {/* Immersive full-width hero banner */}
+      <ProductHero product={product} />
 
-        <Container className="relative">
-          <nav className="flex flex-wrap items-center gap-1.5 text-sm text-steel">
-            <Link href="/" className="transition hover:text-accent">
-              Home
-            </Link>
-            <span aria-hidden>/</span>
-            <Link href="/#products" className="transition hover:text-accent">
-              Products
-            </Link>
-            <span aria-hidden>/</span>
-            <span className="text-ink">{product.name}</span>
-          </nav>
-
-          <div className="mt-10 grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-            {/* Text */}
+      {/* Overview: the real machine on a studio stage + the overview text */}
+      <section className="bg-white py-16 sm:py-24">
+        <Container>
+          <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
             <Reveal>
-              <span className="inline-block rounded-md border border-line bg-mist px-3 py-1 font-mono text-xs font-semibold uppercase tracking-wider text-accent-600">
-                {product.model}
-              </span>
-              <h1 className="mt-4 font-display text-4xl font-bold leading-[1.05] tracking-tight text-ink sm:text-5xl">
-                {product.name}
-              </h1>
-              <p className="mt-4 text-lg leading-relaxed text-ink/80">
-                {product.tagline}
-              </p>
-              <p className="mt-4 text-base leading-relaxed text-steel">
+              <Eyebrow>Overview</Eyebrow>
+              <p className="mt-6 text-lg leading-relaxed text-ink/80 sm:text-xl">
                 {product.overview}
               </p>
-
-              <ul className="mt-6 flex flex-wrap gap-2.5">
-                {product.highlights.map((h) => (
-                  <li
-                    key={h}
-                    className="inline-flex items-center gap-2 rounded-full border border-line bg-white px-3.5 py-1.5 text-sm font-medium text-ink"
-                  >
-                    <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-                    {h}
-                  </li>
-                ))}
-              </ul>
-
               <div className="mt-8 flex flex-wrap gap-4">
                 <Button href="/#contact">Request a Quote</Button>
                 <Button href={site.phoneHref} variant="outline">
@@ -136,8 +92,8 @@ export default async function ProductPage({
               </div>
             </Reveal>
 
-            {/* Stage image with layered accent + model watermark */}
-            <Reveal index={1} className="relative mx-auto w-full max-w-[560px] lg:mr-0">
+            {/* Studio spotlight stage */}
+            <Reveal index={1} className="relative mx-auto w-full max-w-[560px] lg:mr-0 lg:order-first">
               <div
                 aria-hidden
                 className="absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-2xl bg-accent/10"
@@ -149,7 +105,6 @@ export default async function ProductPage({
                     "radial-gradient(125% 115% at 50% 22%, #ffffff 0%, #f4f5f8 55%, #e6e9ef 100%)",
                 }}
               >
-                {/* soft floor shadow to ground the machine */}
                 <div
                   aria-hidden
                   className="pointer-events-none absolute bottom-7 left-1/2 h-12 w-3/5 -translate-x-1/2 rounded-[50%] bg-ink/15 blur-2xl"
@@ -159,7 +114,6 @@ export default async function ProductPage({
                     src={product.image}
                     alt={product.name}
                     fill
-                    preload
                     quality={90}
                     sizes="(max-width: 1024px) 100vw, 560px"
                     className="object-contain transition-transform duration-500 group-hover:scale-105"
