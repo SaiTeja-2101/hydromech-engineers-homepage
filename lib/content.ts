@@ -113,6 +113,67 @@ export const about = {
 } as const;
 
 /**
+ * About Us page — richer, standalone content for the dedicated /about-us route.
+ * All copy is grounded in the company brochure and website. Kept separate from
+ * the home `about` object so the landing section stays unchanged.
+ */
+export const aboutPage = {
+  hero: {
+    eyebrow: "About Hydro Mech Engineers",
+    headlineLines: ["We build the machines", "that shape sheet metal."],
+    sub: "A young sheet metal company from Bangalore with a strong vision, to deliver reliable and economical machines that meet real industrial demands.",
+    image: "/about/engineer.jpg",
+    imageAlt: "Hydro Mech engineer at work on a metal component",
+    primaryCta: { label: "Talk to our team", href: "/#contact" },
+    secondaryCta: { label: "Explore machines", href: "/#products" },
+  },
+  story: {
+    eyebrow: "Our Story",
+    lead: "We take pride in the quality of our machines and the service we provide.",
+    paragraphs: [
+      "Hydro Mech Engineers is a young sheet metal company with a strong vision, to deliver reliable and economical sheet metal solutions for real industrial demands.",
+      "We use high quality materials and tested components, so every machine is dependable and built to last. We are devoted to manufacturing high quality machines and press brake tools, and we keep improving their quality and specifications so our clients always get the best.",
+      "Our work does not end at delivery. We stay in frequent contact with customers to understand their needs, keep spare parts ready, and build long term relationships that keep their floors running.",
+    ],
+    image: "/about/fabrication.jpg",
+    imageAlt: "Sparks fly during metal fabrication in the workshop",
+  },
+  factsIntro: {
+    eyebrow: "By the Numbers",
+    title: "Trusted across Indian industry",
+  },
+  values: {
+    eyebrow: "What We Stand For",
+    title: "The values behind every machine",
+    items: [
+      { title: "Reliability", desc: "Tested components and high grade materials in every build." },
+      { title: "Economical engineering", desc: "Dependable machines that respect your budget." },
+      { title: "Precision", desc: "Accurate, repeatable results, run after run." },
+      { title: "Custom built", desc: "Machines shaped around your material and output." },
+      { title: "Continuous improvement", desc: "We keep refining quality and specifications." },
+      { title: "After sales support", desc: "Fast service and spare parts that keep you running." },
+    ],
+  },
+  capabilities: {
+    eyebrow: "What We Make",
+    title: "Six machine families, one standard of quality",
+    sub: "From bus bar processing to press brake tooling, every machine is built for sheet metal work that has to be right the first time.",
+  },
+  process: {
+    eyebrow: "How We Work",
+    title: "From first call to long after delivery",
+  },
+  vision: {
+    eyebrow: "Our Vision",
+    quote: "To deliver innovative products with superior quality and unmatched customer support.",
+  },
+  cta: {
+    heading: "Let's build the right machine for your floor.",
+    sub: "Tell us your material and output, and our team will help you spec the right machine and share a quote.",
+  },
+} as const;
+
+/**
  * Products — the six machine categories from the brochure.
  * Images use the real white-background product photos where available.
  */

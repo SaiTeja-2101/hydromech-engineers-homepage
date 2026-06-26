@@ -11,14 +11,17 @@ import Logo from "./ui/Logo";
 import NavDropdown from "./ui/NavDropdown";
 import Button from "./ui/Button";
 
+// Routes with a dark full-bleed hero behind a transparent header.
+const TRANSPARENT_HERO_ROUTES = new Set(["/"]);
+
 export default function Header() {
   // `scrolled` flips the header from transparent-over-hero to frosted white.
-  // Only the homepage has a dark hero behind a transparent header; every other
-  // route starts on a light background, so the header is solid from the top.
+  // Routes with a dark hero start transparent; every other route (light
+  // sub-pages) is solid from the top.
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const solid = pathname !== "/" || scrolled;
+  const solid = !TRANSPARENT_HERO_ROUTES.has(pathname) || scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
