@@ -130,7 +130,7 @@ export default async function ProductPage({
                       src={product.image}
                       alt={product.name}
                       fill
-                      priority
+                      preload
                       sizes="(max-width: 1024px) 100vw, 560px"
                       className="object-contain"
                     />

@@ -16,6 +16,15 @@ export default function AboutVision() {
 
   return (
     <section className="relative overflow-hidden bg-accent-600 py-24 sm:py-32">
+      {/* diagonal line texture for richness */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-[0.12]"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(45deg, rgba(255,255,255,0.6) 0, rgba(255,255,255,0.6) 1px, transparent 1px, transparent 14px)",
+        }}
+      />
       {/* faint quotation mark watermark */}
       <span
         aria-hidden
@@ -52,6 +61,17 @@ export default function AboutVision() {
         >
           {vision.quote}
         </motion.blockquote>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-15%" }}
+          transition={{ duration: 0.6, delay: 0.3, ease: EASE }}
+          className="mt-8 flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-white/85"
+        >
+          <span className="h-px w-8 bg-white/70" />
+          Hydro Mech Engineers
+        </motion.p>
       </Container>
     </section>
   );

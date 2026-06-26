@@ -5,7 +5,6 @@ import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Phone, ChevronLeft, ChevronRight } from "lucide-react";
 import { heroSlides, site } from "@/lib/content";
-import { cn } from "@/lib/utils";
 import Container from "./ui/Container";
 import Button from "./ui/Button";
 
@@ -90,7 +89,7 @@ export default function Hero() {
             src={slide.src}
             alt={slide.alt}
             fill
-            priority={index === 0}
+            preload={index === 0}
             sizes="100vw"
             className="object-cover object-center"
           />

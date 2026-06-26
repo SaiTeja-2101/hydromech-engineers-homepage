@@ -12,7 +12,7 @@ import NavDropdown from "./ui/NavDropdown";
 import Button from "./ui/Button";
 
 // Routes with a dark full-bleed hero behind a transparent header.
-const TRANSPARENT_HERO_ROUTES = new Set(["/"]);
+const TRANSPARENT_HERO_ROUTES = new Set(["/", "/about-us"]);
 
 export default function Header() {
   // `scrolled` flips the header from transparent-over-hero to frosted white.

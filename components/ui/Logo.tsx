@@ -22,7 +22,7 @@ export default function Logo({
       alt="Hydro Mech Engineers"
       width={3156}
       height={1025}
-      priority
+      preload
       className={cn(
         "h-8 w-auto sm:h-9",
         tone === "dark" && "brightness-0 invert",

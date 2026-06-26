@@ -120,10 +120,15 @@ export const about = {
 export const aboutPage = {
   hero: {
     eyebrow: "About Hydro Mech Engineers",
-    headlineLines: ["We build the machines", "that shape sheet metal."],
+    // Each line is an array of segments; one segment is highlighted in the UI.
+    headline: [
+      [{ text: "We build the machines" }],
+      [{ text: "that " }, { text: "shape", highlight: true }, { text: " sheet metal." }],
+    ],
     sub: "A young sheet metal company from Bangalore with a strong vision, to deliver reliable and economical machines that meet real industrial demands.",
-    image: "/about/engineer.jpg",
-    imageAlt: "Hydro Mech engineer at work on a metal component",
+    image: "/about/hero-banner.jpg",
+    imageAlt: "Sparks fly from an industrial metal cutting machine on the shop floor",
+    meta: "Bangalore, India",
     primaryCta: { label: "Talk to our team", href: "/#contact" },
     secondaryCta: { label: "Explore machines", href: "/#products" },
   },
@@ -137,6 +142,11 @@ export const aboutPage = {
     ],
     image: "/about/fabrication.jpg",
     imageAlt: "Sparks fly during metal fabrication in the workshop",
+    stats: [
+      { value: "15+", label: "Years of excellence" },
+      { value: "200+", label: "Clients served" },
+      { value: "20+", label: "Industries" },
+    ],
   },
   factsIntro: {
     eyebrow: "By the Numbers",

@@ -30,7 +30,8 @@ export default function AboutCapabilities() {
     <section className="bg-white py-20 sm:py-28">
       <Container>
         <div className="max-w-2xl">
-          <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent sm:text-base">
+          <span className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.2em] text-accent sm:text-base">
+            <span className="h-px w-8 bg-accent" />
             {capabilities.eyebrow}
           </span>
           <h2 className="mt-3 font-display text-3xl font-bold leading-[1.05] tracking-tight text-ink sm:text-4xl md:text-5xl">
@@ -80,6 +81,16 @@ export default function AboutCapabilities() {
             </motion.article>
           ))}
         </motion.div>
+
+        <div className="mt-10">
+          <Link
+            href="/#products"
+            className="group inline-flex items-center gap-2 font-semibold text-accent-600 transition hover:text-accent-700"
+          >
+            View all machines
+            <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </Link>
+        </div>
       </Container>
     </section>
   );

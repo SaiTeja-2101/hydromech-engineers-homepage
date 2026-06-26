@@ -5,7 +5,6 @@ import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
 import AboutHero from "@/components/about/AboutHero";
 import AboutStory from "@/components/about/AboutStory";
-import AboutFacts from "@/components/about/AboutFacts";
 import AboutValues from "@/components/about/AboutValues";
 import AboutCapabilities from "@/components/about/AboutCapabilities";
 import AboutProcess from "@/components/about/AboutProcess";
@@ -22,25 +21,29 @@ export default function AboutPage() {
     <main>
       <AboutHero />
       <AboutStory />
-      <AboutFacts />
       <AboutValues />
       <AboutCapabilities />
       <AboutProcess />
       <AboutVision />
 
-      {/* CTA: distinct from the product-page band - light, bordered panel, left aligned */}
+      {/* CTA: premium dark panel on white, a strong finish into the footer */}
       <section className="bg-white py-20 sm:py-24">
         <Container>
-          <Reveal className="flex flex-col gap-8 rounded-2xl border border-line bg-mist p-8 sm:p-12 lg:flex-row lg:items-center lg:justify-between">
-            <div className="max-w-2xl">
-              <h2 className="font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+          <Reveal className="relative flex flex-col gap-8 overflow-hidden rounded-3xl bg-ink p-9 shadow-2xl shadow-ink/20 sm:p-14 lg:flex-row lg:items-center lg:justify-between">
+            {/* accent glow */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-accent/20 blur-3xl"
+            />
+            <div className="relative max-w-2xl">
+              <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 {aboutPage.cta.heading}
               </h2>
-              <p className="mt-4 leading-relaxed text-steel">{aboutPage.cta.sub}</p>
+              <p className="mt-4 leading-relaxed text-silver">{aboutPage.cta.sub}</p>
             </div>
-            <div className="flex shrink-0 flex-wrap gap-4">
+            <div className="relative flex shrink-0 flex-wrap gap-4">
               <Button href="/#contact">Request a Quote</Button>
-              <Button href="/#products" variant="outline">
+              <Button href="/#products" variant="white">
                 Explore Machines
               </Button>
             </div>

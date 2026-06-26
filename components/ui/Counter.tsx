@@ -22,11 +22,9 @@ export default function Counter({
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (!inView) return;
-    if (reduceMotion) {
-      setCount(value);
-      return;
-    }
+    // Reduced motion shows the final value directly (see `display` below), so no
+    // animation is needed and we avoid a synchronous setState in the effect.
+    if (!inView || reduceMotion) return;
 
     let raf = 0;
     const start = performance.now();
@@ -43,7 +41,7 @@ export default function Counter({
 
   return (
     <span ref={ref}>
-      {count}
+      {reduceMotion ? value : count}
       {suffix}
     </span>
   );
