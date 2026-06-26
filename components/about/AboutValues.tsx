@@ -29,10 +29,10 @@ export default function AboutValues() {
               index={i % 3}
               className="group relative overflow-hidden bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-ink/5 sm:p-8"
             >
-              {/* large faint ghost numeral */}
+              {/* large faint ghost numeral, kept fully inside the card */}
               <span
                 aria-hidden
-                className="pointer-events-none absolute -right-2 -top-4 select-none font-display text-7xl font-bold leading-none text-ink/[0.04] transition-colors duration-300 group-hover:text-accent/10"
+                className="pointer-events-none absolute right-4 top-3 select-none font-display text-6xl font-bold leading-none text-ink/[0.05] transition-colors duration-300 group-hover:text-accent/10 sm:text-7xl"
               >
                 {String(i + 1).padStart(2, "0")}
               </span>
