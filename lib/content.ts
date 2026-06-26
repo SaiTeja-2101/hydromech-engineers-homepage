@@ -197,7 +197,7 @@ export const products = [
       "Efficient punching, bending and cutting of copper and aluminium bus bars in a single, easy-to-adjust unit.",
     points: ["Punch, bend & shear", "Copper & aluminium", "Quick station setup"],
     image: "/products/busbar-processing.jpg",
-    heroImage: "/products/banners/bus-bar.jpg",
+    heroImage: "/products/banners/bus-bar-v2.jpg",
     heroAlt: "Hydro Mech hydraulic bus bar processing machine on the factory floor",
     tagline: "Punch, bend and cut copper and aluminium bus bars on one machine.",
     overview:
@@ -360,7 +360,7 @@ export const products = [
       "High-strength press frames engineered for rigidity and dependable industrial pressing.",
     points: ["Rigid frame", "Repeatable force", "Industrial duty"],
     image: "/products/busbar-punching.jpg",
-    heroImage: "/products/banners/c-h-frame.jpg",
+    heroImage: "/products/banners/c-h-frame-v2.jpg",
     heroAlt: "Hydro Mech hydraulic C-frame press machines",
     tagline: "Compact, rigid presses for fast single-station work.",
     overview:

@@ -29,43 +29,37 @@ export default function ProductHero({ product }: { product: Product }) {
 
   return (
     <section className="relative isolate flex min-h-[88svh] items-center overflow-hidden bg-ink">
-      {/* faint grid + glow behind the text for depth (desktop; covered by the image on mobile) */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-50"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px)",
-          backgroundSize: "48px 48px",
-          maskImage: "radial-gradient(120% 100% at 0% 0%, black 0%, transparent 60%)",
-          WebkitMaskImage: "radial-gradient(120% 100% at 0% 0%, black 0%, transparent 60%)",
-        }}
-      />
-
-      {/* Machine photo: full-bleed background on mobile, right ~56% on desktop */}
-      <div className="absolute inset-0 lg:left-auto lg:w-[56%]">
+      {/* Full-bleed machine photo with a layered scrim (home-hero style): the dark
+          left fades smoothly into the photo, so there is no flat black block. */}
+      <div className="absolute inset-0">
         <Image
           src={product.heroImage}
           alt={product.heroAlt}
           fill
           preload
           quality={90}
-          sizes="(max-width: 1024px) 100vw, 56vw"
+          sizes="100vw"
           className="object-cover object-center"
         />
-        {/* horizontal: left-dark for overlaid text on mobile, blends into graphite on desktop */}
-        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/55 to-ink/10 lg:via-ink/40 lg:to-transparent" />
-        {/* mobile-only bottom darken for legibility */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent lg:hidden" />
+        {/* left-dark fading right (text legibility) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/60 to-ink/15" />
+        {/* depth: bottom + slight top darken */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-ink/25" />
+        {/* subtle vignette */}
+        <div
+          aria-hidden
+          className="absolute inset-0"
+          style={{ boxShadow: "inset 0 0 180px 40px rgba(0,0,0,0.55)" }}
+        />
       </div>
 
-      {/* Text (overlaid on the image on mobile, left panel on desktop) */}
+      {/* Text overlaid on the left, like the home hero */}
       <Container className="relative z-10">
         <motion.div
           variants={container}
           initial="hidden"
           animate="show"
-          className="max-w-xl py-28 sm:py-32 lg:max-w-[48%]"
+          className="max-w-xl py-28 sm:py-32 lg:max-w-[52%]"
         >
           <motion.nav
             variants={up}
