@@ -28,8 +28,8 @@ export default function ProductHero({ product }: { product: Product }) {
   };
 
   return (
-    <section className="relative isolate flex min-h-[78svh] flex-col overflow-hidden bg-ink lg:block">
-      {/* faint grid + glow behind the text for depth */}
+    <section className="relative isolate flex min-h-[88svh] items-center overflow-hidden bg-ink">
+      {/* faint grid + glow behind the text for depth (desktop; covered by the image on mobile) */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-50"
@@ -42,8 +42,8 @@ export default function ProductHero({ product }: { product: Product }) {
         }}
       />
 
-      {/* Machine photo: top band on mobile, right ~55% bleed on desktop */}
-      <div className="relative h-[42vh] w-full shrink-0 lg:absolute lg:inset-y-0 lg:right-0 lg:h-full lg:w-[56%]">
+      {/* Machine photo: full-bleed background on mobile, right ~56% on desktop */}
+      <div className="absolute inset-0 lg:left-auto lg:w-[56%]">
         <Image
           src={product.heroImage}
           alt={product.heroAlt}
@@ -53,18 +53,19 @@ export default function ProductHero({ product }: { product: Product }) {
           sizes="(max-width: 1024px) 100vw, 56vw"
           className="object-cover object-center"
         />
-        {/* blend into the dark text side: bottom on mobile, left on desktop */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent lg:bg-gradient-to-r lg:from-ink lg:via-ink/40 lg:to-transparent" />
-        <div className="absolute inset-0 bg-ink/15" />
+        {/* horizontal: left-dark for overlaid text on mobile, blends into graphite on desktop */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/55 to-ink/10 lg:via-ink/40 lg:to-transparent" />
+        {/* mobile-only bottom darken for legibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent lg:hidden" />
       </div>
 
-      {/* Text panel */}
-      <Container className="relative z-10 flex flex-1 items-center">
+      {/* Text (overlaid on the image on mobile, left panel on desktop) */}
+      <Container className="relative z-10">
         <motion.div
           variants={container}
           initial="hidden"
           animate="show"
-          className="w-full py-12 sm:py-16 lg:max-w-[48%] lg:py-32"
+          className="max-w-xl py-28 sm:py-32 lg:max-w-[48%]"
         >
           <motion.nav
             variants={up}
