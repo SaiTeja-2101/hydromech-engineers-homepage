@@ -13,7 +13,10 @@ import Button from "./ui/Button";
 
 // Routes with a dark full-bleed hero behind a transparent header.
 const isTransparentHeroRoute = (pathname: string) =>
-  pathname === "/" || pathname === "/about-us" || pathname.startsWith("/products");
+  pathname === "/" ||
+  pathname === "/about-us" ||
+  pathname === "/why-us" ||
+  pathname.startsWith("/products");
 
 export default function Header() {
   // `scrolled` flips the header from transparent-over-hero to frosted white.

@@ -32,7 +32,7 @@ export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about-us" },
   { label: "Products", href: "/#products" },
-  { label: "Why Us", href: "/#why-us" },
+  { label: "Why Us", href: "/why-us" },
   { label: "Process", href: "/#process" },
   { label: "Contact", href: "/#contact" },
 ] as const;
@@ -463,6 +463,39 @@ export const features = [
     image: "/why/6.jpg",
   },
 ] as const;
+
+/**
+ * Why Us page — standalone content for /why-us. Reuses the `features` reasons
+ * for the bento grid; all copy grounded in the brochure.
+ */
+export const whyPage = {
+  hero: {
+    eyebrow: "Why Hydro Mech Engineers",
+    headline: "Trusted where it matters, on your floor.",
+    sub: "Precision, reliability and support, built into every machine we deliver.",
+    image: "/why-us/hero-1.jpg",
+    imageAlt: "Automated sheet metal production line on the factory floor",
+    primaryCta: { label: "Talk to our team", href: "/#contact" },
+    secondaryCta: { label: "Explore machines", href: "/#products" },
+  },
+  promise: {
+    eyebrow: "Our Promise",
+    lead: "We take pride in the quality of our machines and the service we provide.",
+    body: "We use high quality materials and tested components, so every machine is reliable and built to last, and we stand behind it long after delivery.",
+  },
+  reasons: {
+    eyebrow: "Why Choose Us",
+    title: "Six reasons the floor trusts us",
+  },
+  commitment: {
+    eyebrow: "Built on Relationships",
+    quote: "We maintain frequent contact with customers to address their requirements and build long term relationships.",
+  },
+  cta: {
+    heading: "Let's build the right machine for your floor.",
+    sub: "Tell us your material and output, and our team will help you spec the right machine and share a quote.",
+  },
+} as const;
 
 /** Process — the end-to-end journey. */
 export const processSteps = [
