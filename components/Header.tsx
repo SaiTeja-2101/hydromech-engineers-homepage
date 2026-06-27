@@ -110,7 +110,7 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Button href="/#contact" className="hidden sm:inline-flex">
+            <Button href="/contact" className="hidden sm:inline-flex">
               Get a Quote
               <ArrowRight className="h-4 w-4" />
             </Button>
@@ -262,7 +262,7 @@ export default function Header() {
                   </Button>
                 </div>
                 <Button
-                  href="/#contact"
+                  href="/contact"
                   variant="white"
                   className="w-full"
                   onClick={() => setMenuOpen(false)}

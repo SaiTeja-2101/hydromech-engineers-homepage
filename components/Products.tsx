@@ -109,7 +109,6 @@ export default function Products() {
               <MachinePanel
                 key={p.id}
                 product={p}
-                index={i}
                 reduceMotion={!!reduceMotion}
                 registerRef={(el) => (panelRefs.current[i] = el)}
               />
@@ -123,12 +122,10 @@ export default function Products() {
 
 function MachinePanel({
   product,
-  index,
   reduceMotion,
   registerRef,
 }: {
   product: Product;
-  index: number;
   reduceMotion: boolean;
   registerRef: (el: HTMLElement | null) => void;
 }) {
@@ -224,7 +221,7 @@ function MachinePanel({
             View Details
             <ArrowRight className="h-4 w-4" />
           </Button>
-          <Button href="#contact" variant="ghost">
+          <Button href="/contact" variant="ghost">
             Get a Quote
           </Button>
         </motion.div>

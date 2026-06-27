@@ -110,7 +110,7 @@ export default function ProductHero({ product }: { product: Product }) {
           </motion.ul>
 
           <motion.div variants={up} className="mt-8 flex flex-wrap items-center gap-4">
-            <Button href="/#contact">
+            <Button href="/contact">
               Request a Quote
               <ArrowRight className="h-4 w-4" />
             </Button>

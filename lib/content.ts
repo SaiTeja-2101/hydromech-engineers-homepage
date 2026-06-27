@@ -132,7 +132,7 @@ export const aboutPage = {
     image: "/about/hero-banner.jpg",
     imageAlt: "Sparks fly from an industrial metal cutting machine on the shop floor",
     meta: "Bangalore, India",
-    primaryCta: { label: "Talk to our team", href: "/#contact" },
+    primaryCta: { label: "Talk to our team", href: "/contact" },
     secondaryCta: { label: "Explore machines", href: "/#products" },
   },
   story: {
@@ -477,7 +477,7 @@ export const whyPage = {
     sub: "Precision, reliability and support, built into every machine we deliver.",
     image: "/why-us/hero-1.jpg",
     imageAlt: "Automated sheet metal production line on the factory floor",
-    primaryCta: { label: "Talk to our team", href: "/#contact" },
+    primaryCta: { label: "Talk to our team", href: "/contact" },
     secondaryCta: { label: "Explore machines", href: "/#products" },
   },
   promise: {

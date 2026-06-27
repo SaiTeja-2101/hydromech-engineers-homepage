@@ -84,7 +84,7 @@ export default async function ProductPage({
                 {product.overview}
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <Button href="/#contact">Request a Quote</Button>
+                <Button href="/contact">Request a Quote</Button>
                 <Button href={site.phoneHref} variant="outline">
                   Call us
                 </Button>
@@ -235,7 +235,7 @@ export default async function ProductPage({
               the right machine and share a quote.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Button href="/#contact">Request a Quote</Button>
+              <Button href="/contact">Request a Quote</Button>
               <Button href={site.phoneHref} variant="white">
                 Call us
               </Button>

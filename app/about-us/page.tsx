@@ -41,7 +41,7 @@ export default function AboutPage() {
               <p className="mt-4 leading-relaxed text-silver">{aboutPage.cta.sub}</p>
             </div>
             <div className="relative flex shrink-0 flex-wrap gap-4">
-              <Button href="/#contact">Request a Quote</Button>
+              <Button href="/contact">Request a Quote</Button>
               <Button href="/#products" variant="white">
                 Explore Machines
               </Button>
