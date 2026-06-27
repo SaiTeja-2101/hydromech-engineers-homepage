@@ -17,6 +17,7 @@ const isTransparentHeroRoute = (pathname: string) =>
   pathname === "/about-us" ||
   pathname === "/why-us" ||
   pathname === "/faq" ||
+  pathname === "/contact" ||
   pathname.startsWith("/products");
 
 export default function Header() {

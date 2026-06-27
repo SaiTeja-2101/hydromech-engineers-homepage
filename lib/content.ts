@@ -19,6 +19,8 @@ export const site = {
   whatsappHref: "https://wa.me/919738371651",
   email: "hydromechengineer@gmail.com",
   emailHref: "mailto:hydromechengineer@gmail.com",
+  email2: "contact@hydromech.co.in",
+  emailHref2: "mailto:contact@hydromech.co.in",
   website: "www.hydromech.co.in",
   address:
     "#10, 1st Main, 1st Cross, Doddanekundi Industrial Area, Opp to NGEF Ancillary, Mahadevapura Post, Bangalore - 560 048",
@@ -34,7 +36,7 @@ export const navLinks = [
   { label: "Products", href: "/#products" },
   { label: "Why Us", href: "/why-us" },
   { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ] as const;
 
 /**
@@ -569,6 +571,33 @@ export const faqPage = {
     heading: "Still have a question? Ask us.",
     sub: "Tell us a little about your job and we will point you to the right machine and a fair price. No pressure, no jargon.",
   },
+} as const;
+
+/** Contact page — standalone content for /contact. */
+export const contactPage = {
+  hero: {
+    eyebrow: "Get in touch",
+    headline: "Let's talk about your machine.",
+    sub: "Whether you need a quote, a custom build or support on a machine you already run, our team is ready to help.",
+    image: "/contact/hero.jpg",
+    imageAlt: "Ethics engineer discussing a project with the workshop team on the factory floor",
+  },
+  heading: "Don't hesitate to contact us for more information.",
+  subheading:
+    "Reach us on the channel that suits you, or send a message and we will get back to you quickly.",
+  formIntro: {
+    heading: "Send us a message",
+    sub: "Tell us your material, output and requirement. We usually reply within one business day.",
+  },
+  hours: [
+    { days: "Monday to Saturday", time: "9:30 AM to 6:30 PM" },
+    { days: "Sunday", time: "Closed" },
+  ],
+  assurances: [
+    "Clear, no obligation quotes",
+    "Machines built to your material and output",
+    "Installation, training and after sales support",
+  ],
 } as const;
 
 /** Process — the end-to-end journey. */

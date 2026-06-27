@@ -17,7 +17,7 @@ const company = [
   { label: "About", href: "/about-us" },
   { label: "Why Choose Us", href: "/why-us" },
   { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const isExternal = (href: string) => href.startsWith("http");
