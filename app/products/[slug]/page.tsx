@@ -25,7 +25,6 @@ export async function generateMetadata({
   const product = products.find((p) => p.id === slug);
   if (!product) return {};
   return {
-    title: `${product.name} | Hydro Mech Engineers`,
     description: product.overview,
   };
 }

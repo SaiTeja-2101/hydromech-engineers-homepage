@@ -70,7 +70,7 @@ export default function AboutVision() {
           className="mt-8 flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-white/85"
         >
           <span className="h-px w-8 bg-white/70" />
-          Hydro Mech Engineers
+          Ethics Metal Forming Machineries
         </motion.p>
       </Container>
     </section>

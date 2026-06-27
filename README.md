@@ -1,12 +1,12 @@
-# Hydro Mech Engineers Website
+# Ethics Metal Forming Machineries Website
 
-A fast, responsive marketing website for Hydro Mech Engineers, a sheet metal machine manufacturer based in Bangalore. It presents the company, its six machine categories, and a way to get in touch.
+A fast, responsive marketing website for Ethics Metal Forming Machineries, a sheet metal machine manufacturer based in Bangalore. It presents the company, its six machine categories, and a way to get in touch.
 
 This project was built as an internship screening task. The goal was a premium, responsive website that uses the company's real brochure content and does not look AI generated.
 
 **Live demo:** <https://hydromech-engineers-homepage.vercel.app>
 
-![Hydro Mech Engineers homepage](images/hero.png)
+![Ethics Metal Forming Machineries homepage](images/hero.png)
 
 ## About the project
 
@@ -111,7 +111,7 @@ All copy and data live in one file: `lib/content.ts`. This includes the site det
 
 ## Design and content notes
 
-- **Brand name:** the supplied logo file is named "ETHICS", but the brochure, the website, and the labels on the machines all read "Hydro Mech Engineers". The site is branded as Hydro Mech Engineers, and the real logo asset is used in the header and footer.
+- **Brand name:** the supplied logo file is named "ETHICS", but the brochure, the website, and the labels on the machines all read "Ethics Metal Forming Machineries". The site is branded as Ethics Metal Forming Machineries, and the real logo asset is used in the header and footer.
 - **Colours:** a graphite dark tone with an orange accent, taken from the foot pedals on the real machines. There is no blue in the interface.
 - **Type:** Space Grotesk for headings and DM Sans for body text.
 - **Honest copy:** all claims are grounded in the brochure. There are no invented certifications, awards, or numbers.

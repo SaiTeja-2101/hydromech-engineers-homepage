@@ -19,21 +19,21 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Hydro Mech Engineers | Reliable Sheet Metal Machines",
+  title: "Ethics Metal Forming Machineries | Reliable Sheet Metal Machines",
   description:
-    "Hydro Mech Engineers designs and manufactures durable, efficient sheet metal machinery — bus bar processing, clinching, section bending, sheet rolling and CNC press brake tools.",
+    "Ethics Metal Forming Machineries designs and manufactures durable, efficient sheet metal machinery, including bus bar processing, clinching, section bending, sheet rolling and CNC press brake tools.",
   keywords: [
     "sheet metal machinery",
     "bus bar processing machine",
     "hydraulic clinching machine",
     "section bending machine",
     "CNC press brake tools",
-    "Hydro Mech Engineers",
+    "Ethics Metal Forming Machineries",
     "Bangalore",
   ],
   openGraph: {
     title:
-      "Hydro Mech Engineers | Reliable Machines, Built for Industrial Demands",
+      "Ethics Metal Forming Machineries | Reliable Machines, Built for Industrial Demands",
     description:
       "Durable and efficient sheet metal solutions, customised for industrial demands.",
     type: "website",

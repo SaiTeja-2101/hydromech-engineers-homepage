@@ -11,9 +11,8 @@ import AboutProcess from "@/components/about/AboutProcess";
 import AboutVision from "@/components/about/AboutVision";
 
 export const metadata: Metadata = {
-  title: "About Us | Hydro Mech Engineers",
   description:
-    "Hydro Mech Engineers is a Bangalore sheet metal company delivering reliable, economical machines and press brake tools, backed by strong after sales support.",
+    "Ethics Metal Forming Machineries is a Bangalore sheet metal company delivering reliable, economical machines and press brake tools, backed by strong after sales support.",
 };
 
 export default function AboutPage() {

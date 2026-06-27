@@ -16,6 +16,7 @@ const isTransparentHeroRoute = (pathname: string) =>
   pathname === "/" ||
   pathname === "/about-us" ||
   pathname === "/why-us" ||
+  pathname === "/faq" ||
   pathname.startsWith("/products");
 
 export default function Header() {
@@ -64,7 +65,7 @@ export default function Header() {
         )}
       >
         <div className="mx-auto flex max-w-[1240px] items-center justify-between px-5 py-3 sm:px-8">
-          <Link href="/" aria-label="Hydro Mech Engineers — home">
+          <Link href="/" aria-label="Ethics Metal Forming Machineries home">
             <Logo tone={solid ? "light" : "dark"} />
           </Link>
 

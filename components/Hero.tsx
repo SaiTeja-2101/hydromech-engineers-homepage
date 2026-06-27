@@ -70,7 +70,7 @@ export default function Hero() {
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
       aria-roledescription="carousel"
-      aria-label="Hydro Mech Engineers highlights"
+      aria-label="Ethics Metal Forming Machineries highlights"
     >
       {/* Full-bleed background photo (crossfades between slides) */}
       <AnimatePresence>

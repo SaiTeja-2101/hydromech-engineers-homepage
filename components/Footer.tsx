@@ -16,7 +16,7 @@ const connect = [
 const company = [
   { label: "About", href: "/about-us" },
   { label: "Why Choose Us", href: "/why-us" },
-  { label: "Our Process", href: "/#process" },
+  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -112,7 +112,7 @@ export default function Footer() {
       <div className="border-t border-graphite-700">
         <Container className="flex flex-col items-center justify-between gap-4 py-6 sm:flex-row">
           <p className="text-sm text-silver/55">
-            © 2026 Hydro Mech Engineers. All rights reserved.
+            © 2026 Ethics Metal Forming Machineries. All rights reserved.
           </p>
           <a
             href="#home"

@@ -70,7 +70,7 @@ export default function WhyChooseUs() {
             Why Choose Us
           </span>
           <h2 className="mt-3 max-w-3xl font-display text-3xl font-bold leading-[1.05] tracking-tight text-ink sm:text-4xl md:text-5xl">
-            Why Partner with Hydro Mech Engineers?
+            Why Partner with Ethics Metal Forming Machineries?
           </h2>
           <p className="mt-3 max-w-xl text-base leading-relaxed text-steel sm:text-lg">
             Because your success depends on precision, reliability, and trust.

@@ -7,9 +7,8 @@ import WhyHero from "@/components/why/WhyHero";
 import WhyReasons from "@/components/why/WhyReasons";
 
 export const metadata: Metadata = {
-  title: "Why Us | Hydro Mech Engineers",
   description:
-    "Why partner with Hydro Mech Engineers: precision, reliability, custom solutions, and strong after sales support, built into every sheet metal machine.",
+    "Why partner with Ethics Metal Forming Machineries: precision, reliability, custom solutions, and strong after sales support, built into every sheet metal machine.",
 };
 
 export default function WhyUsPage() {
@@ -60,7 +59,7 @@ export default function WhyUsPage() {
             </blockquote>
             <p className="mt-8 flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
               <span className="h-px w-8 bg-white/50" />
-              Hydro Mech Engineers
+              Ethics Metal Forming Machineries
             </p>
           </Reveal>
         </Container>

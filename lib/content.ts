@@ -1,19 +1,19 @@
 /**
  * Single source of truth for all homepage copy and data.
  *
- * Everything here is grounded in the official Hydro Mech Engineers brochure and
+ * Everything here is grounded in the official Ethics Metal Forming Machineries brochure and
  * the company website screenshots — no invented claims, certifications or awards.
  * Keeping content in one typed file makes every section data-driven and easy to
  * maintain (and easy to walk through in the Loom video).
  */
 
 export const site = {
-  name: "Hydro Mech Engineers",
-  shortName: "Hydro Mech",
+  name: "Ethics Metal Forming Machineries",
+  shortName: "Ethics",
   tagline: "Reliable Machines, Built for Industrial Demands",
   eyebrow: "Your Trusted Sheet Metal Partner",
   intro:
-    "At Hydro Mech Engineers, we design and manufacture durable and efficient sheet metal machines — built for reliability, precision and long-term value.",
+    "At Ethics Metal Forming Machineries, we design and manufacture durable and efficient sheet metal machines, built for reliability, precision and long-term value.",
   phone: "+91 973 837 1651",
   phoneHref: "tel:+919738371651",
   whatsappHref: "https://wa.me/919738371651",
@@ -33,7 +33,7 @@ export const navLinks = [
   { label: "About", href: "/about-us" },
   { label: "Products", href: "/#products" },
   { label: "Why Us", href: "/why-us" },
-  { label: "Process", href: "/#process" },
+  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/#contact" },
 ] as const;
 
@@ -92,7 +92,7 @@ export const stats = [
 export const about = {
   headline: "Built on Reliable, Economical Engineering",
   paragraphs: [
-    "Hydro Mech Engineers is a sheet metal company with one clear goal: to deliver reliable and economical machines that meet real industrial demands.",
+    "Ethics Metal Forming Machineries is a sheet metal company with one clear goal: to deliver reliable and economical machines that meet real industrial demands.",
     "We use high-quality materials and tested components, so every machine is dependable and built to last. We keep improving our products, and we stand behind them long after delivery.",
   ],
   values: [
@@ -120,7 +120,7 @@ export const about = {
  */
 export const aboutPage = {
   hero: {
-    eyebrow: "About Hydro Mech Engineers",
+    eyebrow: "About Ethics Metal Forming Machineries",
     // Each line is an array of segments; one segment is highlighted in the UI.
     headline: [
       [{ text: "We build the machines" }],
@@ -137,7 +137,7 @@ export const aboutPage = {
     eyebrow: "Our Story",
     lead: "We take pride in the quality of our machines and the service we provide.",
     paragraphs: [
-      "Hydro Mech Engineers is a young sheet metal company with a strong vision, to deliver reliable and economical sheet metal solutions for real industrial demands.",
+      "Ethics Metal Forming Machineries is a young sheet metal company with a strong vision, to deliver reliable and economical sheet metal solutions for real industrial demands.",
       "We use high quality materials and tested components, so every machine is dependable and built to last. We are devoted to manufacturing high quality machines and press brake tools, and we keep improving their quality and specifications so our clients always get the best.",
       "Our work does not end at delivery. We stay in frequent contact with customers to understand their needs, keep spare parts ready, and build long term relationships that keep their floors running.",
     ],
@@ -198,7 +198,7 @@ export const products = [
     points: ["Punch, bend & shear", "Copper & aluminium", "Quick station setup"],
     image: "/products/busbar-processing.jpg",
     heroImage: "/products/banners/bus-bar-v2.jpg",
-    heroAlt: "Hydro Mech hydraulic bus bar processing machine on the factory floor",
+    heroAlt: "Ethics hydraulic bus bar processing machine on the factory floor",
     tagline: "Punch, bend and cut copper and aluminium bus bars on one machine.",
     overview:
       "The HMB-303 series gives one effective solution for punching, bending and cutting bus bars. Each station adjusts quickly to shorten setup time and improve production, and it handles both copper and aluminium. The machine is easy to move and maintain.",
@@ -241,7 +241,7 @@ export const products = [
     points: ["Hydraulic force 53 kN", "Throat depth 450 mm", "Safety protection"],
     image: "/products/clinching.jpg",
     heroImage: "/products/banners/clinching.webp",
-    heroAlt: "Hydro Mech hydraulic clinching machine",
+    heroAlt: "Ethics hydraulic clinching machine",
     tagline: "Strong, repeatable fastener insertion on a rigid C-frame.",
     overview:
       "The HM-640 inserts fasteners into sheet metal with a hydraulic force of 53 kN and tight force repeatability of ±2%. Its C-frame is built from ultrasonically and tensile-tested IS:2062 grade steel for rigidity and minimal deflection, with a safety protection system and positive stop as standard.",
@@ -284,7 +284,7 @@ export const products = [
     points: ["Accurate profile bends", "Robust construction", "Versatile use"],
     image: "/products/section-bending.jpg",
     heroImage: "/products/banners/section-bending.jpg",
-    heroAlt: "Hydro Mech hydraulic section bending machine in the workshop",
+    heroAlt: "Ethics hydraulic section bending machine in the workshop",
     tagline: "Three-roll bending for pipes, angles, flats and profiles.",
     overview:
       "A hydraulic three-roll section bending machine for round pipe, square and rectangular pipe, angle and flat bar. The HV series works in both horizontal and vertical orientation, with hardened rolls, quick roll change and a welded steel frame that a semi-skilled operator can run.",
@@ -324,7 +324,7 @@ export const products = [
     points: ["3-roll design", "Hardened steel rolls", "Motor-driven bending"],
     image: "/products/plate-rolling.jpg",
     heroImage: "/products/banners/sheet-rolling.jpg",
-    heroAlt: "Hydro Mech hydro-mechanical sheet rolling machine",
+    heroAlt: "Ethics hydro-mechanical sheet rolling machine",
     tagline: "Asymmetrical three-roll slip rolling for thin steel sheet.",
     overview:
       "An asymmetrical three-roll slip rolling machine for bending thin steel sheet. Motor driven with high-strength steel rolls, a fixed top roller and adjustable lower and rear rollers, plus a quick-release top roller to free the finished workpiece.",
@@ -361,7 +361,7 @@ export const products = [
     points: ["Rigid frame", "Repeatable force", "Industrial duty"],
     image: "/products/busbar-punching.jpg",
     heroImage: "/products/banners/c-h-frame-v2.jpg",
-    heroAlt: "Hydro Mech hydraulic C-frame press machines",
+    heroAlt: "Ethics hydraulic C-frame press machines",
     tagline: "Compact, rigid presses for fast single-station work.",
     overview:
       "Compact, portable C-frame presses for quick, accurate single-station bending and punching, plus larger H-frame presses built to your needs. Light and easy to move, with inexpensive tooling and low maintenance, built on rigid tensile-tested steel frames.",
@@ -470,7 +470,7 @@ export const features = [
  */
 export const whyPage = {
   hero: {
-    eyebrow: "Why Hydro Mech Engineers",
+    eyebrow: "Why Ethics Metal Forming Machineries",
     headline: "Trusted where it matters, on your floor.",
     sub: "Precision, reliability and support, built into every machine we deliver.",
     image: "/why-us/hero-1.jpg",
@@ -494,6 +494,80 @@ export const whyPage = {
   cta: {
     heading: "Let's build the right machine for your floor.",
     sub: "Tell us your material and output, and our team will help you spec the right machine and share a quote.",
+  },
+} as const;
+
+/** FAQ page — common questions, answered in plain language. */
+export const faqPage = {
+  hero: {
+    eyebrow: "Help & Support",
+    headline: "Answers, before you ask.",
+    sub: "The questions buyers ask us most, about our machines, lead times, support and warranty, all in one place.",
+    image: "/faq/faq_hero.jpg",
+    imageAlt: "Bright modern sheet metal production facility",
+    cta: { label: "Ask a question", href: "#ask" },
+  },
+  intro: {
+    eyebrow: "FAQ",
+    heading: "Questions we hear a lot",
+    line: "If you do not see what you are looking for, send us a note and we will get back to you quickly.",
+  },
+  faqs: [
+    {
+      category: "Products",
+      q: "What kind of machines does Ethics Metal Forming Machineries make?",
+      a: "We build sheet metal forming machines for industrial work: bus bar processing machines, hydraulic clinching machines, section and profile bending machines, sheet rolling machines, C frame and H frame presses, and CNC press brake tools. If you form, bend, punch or join metal, there is a good chance we make a machine for it.",
+    },
+    {
+      category: "Products",
+      q: "Can you build a machine to suit my exact requirement?",
+      a: "Yes. Most of what leaves our floor is built to order. Tell us the material, thickness, tonnage and the output you need, and we design the machine around that rather than asking you to fit your job to a standard model.",
+    },
+    {
+      category: "Service & Support",
+      q: "Do you install the machine and train my team?",
+      a: "We do. Our team installs and commissions the machine at your site and walks your operators through running it safely, so production starts without guesswork.",
+    },
+    {
+      category: "Service & Support",
+      q: "What does your after sales support look like?",
+      a: "We stay in touch once the machine is delivered. If something needs attention, you can reach us by phone or WhatsApp and we will help you sort it out, whether it is a quick question or a service visit.",
+    },
+    {
+      category: "Orders & Warranty",
+      q: "How do I get a price or a quote?",
+      a: "Send us your requirement through the contact form on this site or by email, or simply call us. We will come back with a clear quote and the specifications, with no obligation.",
+    },
+    {
+      category: "Orders & Warranty",
+      q: "Do the machines come with a warranty?",
+      a: "Yes, every machine carries a standard warranty. We confirm the exact terms in writing along with your quote, so you know precisely what is covered.",
+    },
+    {
+      category: "Products",
+      q: "Which industries do you supply to?",
+      a: "Our machines work across electrical and switchgear, fabrication, automotive, construction and general engineering. The common thread is anyone who shapes sheet metal and wants equipment they can rely on day after day.",
+    },
+    {
+      category: "Service & Support",
+      q: "Can I get spare parts later on?",
+      a: "Yes. We supply spare parts for the machines we build, so you can keep yours running for the long haul instead of hunting for replacements elsewhere.",
+    },
+    {
+      category: "Orders & Warranty",
+      q: "How long does it take to get my machine?",
+      a: "A typical build runs about four to eight weeks, depending on the machine and how customised it is. We give you a realistic timeline when we confirm your order, and keep you posted as it progresses.",
+    },
+    {
+      category: "Service & Support",
+      q: "Do you offer ongoing maintenance contracts?",
+      a: "If you would like scheduled upkeep, we can arrange an annual maintenance plan so your machine is checked and serviced regularly. It is optional, and handy for shops that run heavy production.",
+    },
+  ],
+  contact: {
+    eyebrow: "Still curious",
+    heading: "Still have a question? Ask us.",
+    sub: "Tell us a little about your job and we will point you to the right machine and a fair price. No pressure, no jargon.",
   },
 } as const;
 

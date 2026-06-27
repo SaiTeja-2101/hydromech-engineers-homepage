@@ -82,7 +82,7 @@ export default function About({ showMoreLink = true }: { showMoreLink?: boolean 
               <div className="relative aspect-[4/3] w-full">
                 <Image
                   src="/products/busbar-processing.jpg"
-                  alt="Hydro Mech Hydraulic Bus Bar Processing Machine (3-in-1)"
+                  alt="Ethics Hydraulic Bus Bar Processing Machine (3-in-1)"
                   fill
                   sizes="(max-width: 1024px) 100vw, 520px"
                   className="object-contain"
